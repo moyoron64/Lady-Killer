@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
 /*--------------------------------------------------------
   初期設定
 --------------------------------------------------------*/
-	static public int waterLife = 6; // 中身の残量
+	static public int waterLife = 25; // 中身の残量
 	static public bool isActive = true;
 	        public float speed = 5;
 
