@@ -23,8 +23,7 @@ public class Timer : MonoBehaviour {
 	GUITexture n17;
 	GUITexture n18;
 	GUITexture n19;
-	public float startTime = 99; // seconds
-	public float timer;
+	public static float timer;
 	public bool paused = true;
 	int number10;
 	int number;
