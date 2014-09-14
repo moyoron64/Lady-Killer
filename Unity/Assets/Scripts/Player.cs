@@ -5,6 +5,15 @@ using System.Collections;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class Player : MonoBehaviour {
 
+/*--------------------------------------------------------
+  初期設定
+--------------------------------------------------------*/
+	static public int waterLife = 22; // 中身の残量
+	static public bool isActive = true;
+	        public float speed = 5;
+
+
+	public Vector3 startPosition; // ゲーム開始時の初期位置
 	public int jumpForce = 1;
 
 	private bool jump = false;
@@ -12,8 +21,28 @@ public class Player : MonoBehaviour {
 	float lastZ;
 
 	void Start(){
-				this.lastZ = 0;
+		startPosition = transform.localPosition;
+	}
+
+
+	void Update()
+	{
+		if (waterLife == 0 && isActive) {
+			isActive = false;
+			Invoke("resetStage", 3);
 		}
+
+		float x = Input.GetAxisRaw ("Horizontal");
+
+                // 上・下
+                float y = Input.GetAxisRaw ("Vertical");
+
+                // 移動する向きを求める
+                Vector2 direction = new Vector2 (x, y).normalized;
+
+                // 移動する向きとスピードを代入する
+                rigidbody2D.velocity = direction * speed;
+	}
 
 
 	public Rigidbody2D cRigidbody2D
@@ -37,24 +66,9 @@ public class Player : MonoBehaviour {
 		float g = Input.acceleration.magnitude - 1.0f;
 		lastZ = (lastZ + g) * 0.9f;
 
-
-
-		/*if (Input.acceleration.x > 0.5f || Input.acceleration.x < 0.3f )
-						return;*/
-
-
 		if ( lastZ > 0.7f && jump == false) {
-						jump = true;
-						Debug.Log("spaceon");
+			jump = true;
 		}
-		/*if (jump == true) {
-			cRigidbody2D.velocity = new Vector2(1000000,
-			                                    100000000000000);
-
-		}*/
-
-
-
 	}
 
 
@@ -73,22 +87,17 @@ public class Player : MonoBehaviour {
 		if(col.gameObject.tag == "yuka")
 			isGrounded = true;
 			jump = false;
-		Debug.Log("spaceonaaaaaaaaaaa");
 	}
-
-
-
-
-
 
 	void Move()
 	{
-			cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x,
-		                                    cRigidbody2D.velocity.y);
+			cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+	}
 
-
-
-
-
+	// 水が全てこぼれたらステージをリセット
+	void resetStage()
+	{
+		transform.localPosition = startPosition;
+		transform.eulerAngles = new Vector3(0, 0, 0);
 	}
 }
