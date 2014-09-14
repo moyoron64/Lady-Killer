@@ -2,11 +2,11 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(PolygonCollider2D))]
 public class Player : MonoBehaviour {
-	
+
 	public int jumpForce = 1;
-	
+
 	private bool jump = false;
 	private bool isGrounded  = true ;
 	float lastZ;
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 	Rigidbody2D _cRigidbody2D;
-	
+
 	public float moveSpeed = 5;
 
 	void FixedUpdate()
@@ -38,19 +38,19 @@ public class Player : MonoBehaviour {
 		lastZ = (lastZ + g) * 0.9f;
 
 
-		
+
 		/*if (Input.acceleration.x > 0.5f || Input.acceleration.x < 0.3f )
 						return;*/
 
-		
+
 		if ( lastZ > 0.7f && jump == false) {
 						jump = true;
 						Debug.Log("spaceon");
-		} 
+		}
 		/*if (jump == true) {
 			cRigidbody2D.velocity = new Vector2(1000000,
 			                                    100000000000000);
-		
+
 		}*/
 
 
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour {
 	{
 			cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x,
 		                                    cRigidbody2D.velocity.y);
-		
+
 
 
 
