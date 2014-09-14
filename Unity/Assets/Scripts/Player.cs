@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 --------------------------------------------------------*/
 	static public int waterLife = 22; // 中身の残量
 	static public bool isActive = true;
+	static public float xPosition;
+	static public Vector2 velocity;
 	        public float speed = 5;
 
 
@@ -22,26 +24,18 @@ public class Player : MonoBehaviour {
 
 	void Start(){
 		startPosition = transform.localPosition;
+		waterLife = 22;
+		isActive = true;
 	}
 
 
 	void Update()
 	{
-		if (waterLife == 0 && isActive) {
+		if (waterLife == 0) {
 			isActive = false;
 			Invoke("resetStage", 3);
 		}
 
-		float x = Input.GetAxisRaw ("Horizontal");
-
-                // 上・下
-                float y = Input.GetAxisRaw ("Vertical");
-
-                // 移動する向きを求める
-                Vector2 direction = new Vector2 (x, y).normalized;
-
-                // 移動する向きとスピードを代入する
-                rigidbody2D.velocity = direction * speed;
 	}
 
 
@@ -60,6 +54,19 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+
+		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
+
+		float x = Input.GetAxisRaw ("Horizontal");
+
+                // 上・下
+                float y = Input.GetAxisRaw ("Vertical");
+
+                // 移動する向きを求める
+                Vector2 direction = new Vector2 (x, y).normalized;
+
+                // 移動する向きとスピードを代入する
+                rigidbody2D.velocity = direction * speed;
 		Move();
 		Jump();
 
@@ -69,6 +76,8 @@ public class Player : MonoBehaviour {
 		if ( lastZ > 0.7f && jump == false) {
 			jump = true;
 		}
+
+		velocity = rigidbody2D.velocity;
 	}
 
 
@@ -97,7 +106,12 @@ public class Player : MonoBehaviour {
 	// 水が全てこぼれたらステージをリセット
 	void resetStage()
 	{
+
+		/*
 		transform.localPosition = startPosition;
 		transform.eulerAngles = new Vector3(0, 0, 0);
+		*/
+
+		Application.LoadLevel ("Scene1");
 	}
 }

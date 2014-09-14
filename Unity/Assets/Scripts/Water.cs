@@ -16,7 +16,7 @@ public class Water : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// 水が地面にこぼれたときの処理
-		if (transform.localPosition.y < 3 && isActive) {
+		if (transform.localPosition.y < 5 && isActive) {
 			waterLost();
 		}
 		if (Player.waterLife == 0 && Player.isActive) {
