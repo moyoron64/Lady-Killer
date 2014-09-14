@@ -34,6 +34,6 @@ public class Water : MonoBehaviour {
 
 	public void resetStage()
 	{
-		transform.localPosition = startPosition;
+		Application.LoadLevel ("Scene1");
 	}
 }
