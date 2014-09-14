@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 --------------------------------------------------------*/
 	static public int waterLife = 6; // 中身の残量
 	static public bool isActive = true;
+	        public float speed = 5;
+
 
 	public Vector3 startPosition; // ゲーム開始時の初期位置
 	public int jumpForce = 1;
@@ -29,6 +31,17 @@ public class Player : MonoBehaviour {
 			isActive = false;
 			Invoke("resetStage", 3);
 		}
+
+		float x = Input.GetAxisRaw ("Horizontal");
+
+                // 上・下
+                float y = Input.GetAxisRaw ("Vertical");
+
+                // 移動する向きを求める
+                Vector2 direction = new Vector2 (x, y).normalized;
+
+                // 移動する向きとスピードを代入する
+                rigidbody2D.velocity = direction * speed;
 	}
 
 
@@ -85,5 +98,6 @@ public class Player : MonoBehaviour {
 	void resetStage()
 	{
 		transform.localPosition = startPosition;
+		transform.eulerAngles = new Vector3(0, 0, 0);
 	}
 }
