@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 /*--------------------------------------------------------
   初期設定
 --------------------------------------------------------*/
+	static public int life = 3;
 	static public int waterLife = 22; // 中身の残量
 	static public bool isActive = true;
 	static public float xPosition;
@@ -31,7 +32,12 @@ public class Player : MonoBehaviour {
 
 	void Update()
 	{
-		if (waterLife == 0) {
+		Debug.Log(life);
+		if (Timer.timer < 90.0f && isActive) {
+			Invoke("resetStage", 1);
+		}
+
+		if (waterLife == 0 && isActive) {
 			isActive = false;
 			Invoke("resetStage", 3);
 		}
@@ -112,6 +118,7 @@ public class Player : MonoBehaviour {
 		transform.eulerAngles = new Vector3(0, 0, 0);
 		*/
 
+		life --;
 		Application.LoadLevel ("Scene1");
 	}
 }
