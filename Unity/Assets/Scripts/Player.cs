@@ -32,8 +32,7 @@ public class Player : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log(life);
-		if (Timer.timer < 90.0f && isActive) {
+		if (Timer.timer < 0.0f && isActive) {
 			Invoke("resetStage", 1);
 		}
 
