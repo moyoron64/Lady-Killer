@@ -36,6 +36,6 @@ public class miniMap : MonoBehaviour {
 
 
 		transform.position = new Vector3(glass.transform.position.x + 10, glass.transform.position.y + 5 ,glass.transform.position.z + offset.z);
-		miniGlass.transform.position = new Vector3(glass.transform.position.x + 8 + (perce * transform.lossyScale.x), glass.transform.position.y + 6 ,glass.transform.position.z + offset.z);
+		miniGlass.transform.position = new Vector3(glass.transform.position.x + 6 + (perce * transform.lossyScale.x), glass.transform.position.y + 6 ,glass.transform.position.z + offset.z);
 	}
 }
