@@ -48,14 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" />
      <Compile Include="Assets\LiquidPhysics\Scripts\ParticleGenerator.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\BgmControle.cs" />
      <Compile Include="Assets\Scripts\CameraControll.cs" />
+     <Compile Include="Assets\Scripts\Density.cs" />
      <Compile Include="Assets\Scripts\DrinkMove.cs" />
      <Compile Include="Assets\Scripts\DrinkMoveSe.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
      <Compile Include="Assets\Scripts\Goal.cs" />
      <Compile Include="Assets\Scripts\Loadtime.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SeControle.cs" />
      <Compile Include="Assets\Scripts\Skip.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
@@ -64,11 +67,15 @@
      <Compile Include="Assets\Scripts\TextureControle.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Title.cs" />
+     <Compile Include="Assets\Scripts\TotalScore.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ZankiCheck.cs" />
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
+     <Compile Include="Assets\Scripts\resultKyori.cs" />
+     <Compile Include="Assets\Scripts\resultNokori.cs" />
+     <Compile Include="Assets\Scripts\resultTime.cs" />
      <Compile Include="Assets\Texture2.cs" />
      <None Include="Assets\LiquidPhysics\Shaders\Metaballs_Multiple.shader" />
   </ItemGroup>
