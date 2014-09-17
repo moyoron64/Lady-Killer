@@ -5,7 +5,7 @@ public class Goal : MonoBehaviour {
 	// プロパティ
 	float xSize; // x方向のサイズ
 	float xPosition;
-	float distance; // グラスとの距離
+	static float distance; // グラスとの距離
 
 	/*--------------------------------------------
 	  初期化

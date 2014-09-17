@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\TotalScore.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ZankiCheck.cs" />
+     <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
      <Compile Include="Assets\Scripts\resultKyori.cs" />
