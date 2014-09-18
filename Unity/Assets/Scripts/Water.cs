@@ -21,9 +21,11 @@ public class Water : MonoBehaviour {
 		if (transform.localPosition.y < glass.transform.localPosition.y && isActive) {
 			waterLost();
 		}
+		/*
 		if (Player.waterLife == 0 && Player.isActive) {
 			Invoke("resetStage", 3);
 		}
+		*/
 	}
 
 
