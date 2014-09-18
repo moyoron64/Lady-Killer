@@ -118,6 +118,7 @@ public class Player : MonoBehaviour {
 		*/
 
 		life --;
-		Application.LoadLevel ("Scene1");
+
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 }
