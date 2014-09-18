@@ -3,7 +3,7 @@ using System.Collections;
 
 public class resultTime : MonoBehaviour {
 
-	private int timesec= 10;
+
 	public string Text;
 	public int depth =0;
 	public float strWidth=4;
@@ -16,7 +16,7 @@ public class resultTime : MonoBehaviour {
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="残り時間   " + timesec+"秒";
+		Text="残り時間   " + (int)Timer.timer +"秒";
 	}
 	
 	// Update is called once per frame

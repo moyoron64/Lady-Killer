@@ -41,6 +41,8 @@ public class Player : MonoBehaviour {
 			Invoke("resetStage", 3);
 		}
 
+		Debug.Log (Goal.distance);
+	
 	}
 
 
@@ -83,6 +85,8 @@ public class Player : MonoBehaviour {
 		}
 
 		velocity = rigidbody2D.velocity;
+
+
 	}
 
 
@@ -119,6 +123,13 @@ public class Player : MonoBehaviour {
 
 		life --;
 
+		if (life == -1 ) {
+			Application.LoadLevel("Gameover");
+			return;
+		}
+
 		Application.LoadLevel (Application.loadedLevelName);
+
+
 	}
 }

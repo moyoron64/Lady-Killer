@@ -5,7 +5,7 @@ public class Goal : MonoBehaviour {
 	// プロパティ
 	float xSize; // x方向のサイズ
 	float xPosition;
-	static float distance; // グラスとの距離
+	static public float distance; // グラスとの距離
 
 	/*--------------------------------------------
 	  初期化
@@ -14,13 +14,14 @@ public class Goal : MonoBehaviour {
 	void Start () {
 		xSize = transform.lossyScale.x;
 		xPosition = transform.localPosition.x;
+		distance = 10;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.velocity.x < 1.0) {
 			// ゴールの半径内かつ速度が１以下ならシーン移動
-			Application.LoadLevel ("Scene1");
+			Application.LoadLevel ("Result2");
 		}
 	}
 

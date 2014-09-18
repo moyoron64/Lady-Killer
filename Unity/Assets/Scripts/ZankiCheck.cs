@@ -23,7 +23,6 @@ public class ZankiCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (Player.life);
 		if (Player.life == 0) {
 			go.renderer.enabled = false;
 			go2.renderer.enabled = false;
