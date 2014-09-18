@@ -307,6 +307,8 @@ public class TotalScore : MonoBehaviour {
 		score5 = score % 1000000/100000;
 		score6 = score / 1000000;
 
+		PlayerPrefs.SetInt("Result", score);
+
 		if(score0==0)po00.renderer.enabled= true;
 		if(score0==1)po01.renderer.enabled= true;
 		if(score0==2)po02.renderer.enabled= true;

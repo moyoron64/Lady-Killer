@@ -34,6 +34,7 @@ public class Water : MonoBehaviour {
 
 	public void resetStage()
 	{
-		Application.LoadLevel ("Scene1");
+		// 同じシーンに戻ってくる
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 }
