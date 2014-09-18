@@ -16,7 +16,7 @@ public class resultKyori : MonoBehaviour {
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="距離" + kyori+ "mm";
+		Text="距離   " + (int)Goal.distance + "mm";
 	}
 	
 	// Update is called once per frame
