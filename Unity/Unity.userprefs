@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TotalScore.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\popWindow.cs">
     <Files>
-      <File FileName="Assets\Scripts\resultNokori.cs" Line="4" Column="22" />
-      <File FileName="Assets\Scripts\resultTime.cs" Line="8" Column="2" />
-      <File FileName="Assets\Scripts\resultKyori.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\popWindow.cs" Line="7" Column="28" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="316" Column="44" />
+      <File FileName="Assets\Scripts\popWindow.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
