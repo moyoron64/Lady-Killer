@@ -29,19 +29,29 @@ public class BgmControle: MonoBehaviour {
 					if (Input.touchCount > 0 && 
 					    Input.GetTouch(0).phase == TouchPhase.Moved) {
 						
+
+						Vector3 pos = Input.GetTouch(0).position;
 						
-						Vector3 position = Input.GetTouch(0).position;
-						
-						Vector3 target = Camera.main.ScreenToWorldPoint(position);
+						Vector3 target = Camera.main.ScreenToWorldPoint(pos);
 						//gameObject.transform.position += (screenToWorldPointPosition - gameObject.transform.position)/speed;
 
-					
+						if(target.x >  2){
+							return;
+						}
+						
+						if(target.x <  -2){
+							return;
+						}
 
 						transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed );
+						
 
-						float check = (target.x + 0.1f)/6;
 
-						Debug.Log(check);
+					
+					
+						float check = (this.transform.position.x + 2)/4;
+
+						Debug.Log(target.x);
 
 						SoundManager.Instance.volume.BGM = check; 
 					}

@@ -17,9 +17,9 @@ public class Player : MonoBehaviour {
 
 
 	public Vector3 startPosition; // ゲーム開始時の初期位置
-	public int jumpForce = 1;
+	public float jumpForce = 1f;
 
-	private bool jump = false;
+	public static bool jump = false;
 	private bool isGrounded  = true ;
 	float lastZ;
 
@@ -41,8 +41,12 @@ public class Player : MonoBehaviour {
 			Invoke("resetStage", 3);
 		}
 
-		Debug.Log (Goal.distance);
-	
+		if (Input.GetKeyDown("a")) {
+			jump=true;
+			Debug.Log(Goal.distance);
+		}
+
+
 	}
 
 
@@ -74,6 +78,10 @@ public class Player : MonoBehaviour {
 
                 // 移動する向きとスピードを代入する
                 rigidbody2D.velocity = direction * speed;
+
+
+
+
 		Move();
 		Jump();
 
@@ -94,8 +102,7 @@ public class Player : MonoBehaviour {
 	{
 		if(jump == true &&  isGrounded)
 		{
-			rigidbody2D.AddForce(Vector2.up * 600f);
-			Debug.Log("spaceon");
+			rigidbody2D.AddForce(Vector2.up * jumpForce);
 			isGrounded=false;
 		}
 	}

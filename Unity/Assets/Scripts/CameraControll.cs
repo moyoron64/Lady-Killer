@@ -17,6 +17,8 @@ public class CameraControll : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		this.transform.position = new Vector3(this.transform.position.x, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
+	
 		if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3) {
 		this.transform.position = new Vector3(this.kakuteru.transform.position.x - 3, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
 		}

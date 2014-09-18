@@ -26,6 +26,9 @@ public class Water : MonoBehaviour {
 			Invoke("resetStage", 3);
 		}
 		*/
+		/*if (Input.GetKeyDown("a") && Player.jump==true) {
+			rigidbody2D.AddForce(Vector2.up * Player.jumpForce);
+		}*/
 	}
 
 

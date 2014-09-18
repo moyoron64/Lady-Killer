@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 4c6372b02d5d26a4eabc6a0efd20d8ac
+guid: fb5325ec6be4ddf44bf9af4f3f6fd4a0
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "\u3082\u30581"
+    21300000: gauge
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

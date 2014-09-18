@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 3925a02e15433b84c8cb55a682babf5a
+guid: 30a0aa2a2c016a54586a3160400d22b1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "\u3082\u3058\uFF12"
+    21300000: gameover 1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
