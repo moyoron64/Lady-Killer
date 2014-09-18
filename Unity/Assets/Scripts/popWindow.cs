@@ -34,9 +34,8 @@ public class popWindow : MonoBehaviour {
 			
 			if(colition2d) {
 				RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
-				if(hitObject.collider.gameObject.name =="STOP" && game == 1){
+				if(hitObject.collider.gameObject.name =="STOP"){
 					Time.timeScale = 0;
-					game = 0;
 					pop1.renderer.enabled = true;
 					pop2.renderer.enabled = true;
 					pop3.renderer.enabled = true;
@@ -52,6 +51,7 @@ public class popWindow : MonoBehaviour {
 				}
 				if(hitObject.collider.gameObject.name =="go"){
 					Application.LoadLevel("Title");
+					Time.timeScale = 1;
 				}
 			}
 		}
