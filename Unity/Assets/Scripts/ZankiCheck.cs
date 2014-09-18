@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class zankiWindow2 : MonoBehaviour {
+public class ZankiCheck : MonoBehaviour {
 
 	GameObject go,go2,go3;
 	// Use this for initialization
@@ -23,12 +23,15 @@ public class zankiWindow2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Debug.Log (Player.life);
 		if (Player.life == 0) {
 			go.renderer.enabled = false;
+			go2.renderer.enabled = false;
+			go3.renderer.enabled = false;
 		}
 		if (Player.life == 1) {
 			go2.renderer.enabled = false;
+			go3.renderer.enabled = false;
 		}
 		if (Player.life == 2) {
 			go3.renderer.enabled = false;
