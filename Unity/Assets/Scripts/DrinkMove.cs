@@ -4,6 +4,8 @@ using System.Collections;
 public class DrinkMove : MonoBehaviour {
 
 	public float speed = 1.0f;
+	public float plus = 1.0f;
+	public float waru = 1.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +19,7 @@ public class DrinkMove : MonoBehaviour {
 
 			//transform.position.y = transform.position.x;
 
-			transform.position = Vector2.MoveTowards(transform.position, new Vector2( transform.position.x, transform.position.x/20+1), speed );
+			transform.position = Vector2.MoveTowards(transform.position, new Vector2( transform.position.x, transform.position.x/waru+plus), speed );
 
 		//}
 

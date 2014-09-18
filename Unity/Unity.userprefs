@@ -1,20 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\resultKyori.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Loadtime.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraControll.cs" Line="25" Column="3" />
-      <File FileName="Assets\Scripts\ZankiCheck.cs" Line="25" Column="18" />
-      <File FileName="Assets\Scripts\Player.cs" Line="43" Column="3" />
-      <File FileName="Assets\Scripts\Loadtime.cs" Line="27" Column="40" />
-      <File FileName="Assets\Scripts\miniMap.cs" Line="13" Column="39" />
-      <File FileName="Assets\Scripts\SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Timer.cs" Line="29" Column="13" />
-      <File FileName="Assets\Scripts\BgmControle.cs" Line="7" Column="29" />
-      <File FileName="Assets\Scripts\resultKyori.cs" Line="17" Column="3" />
-      <File FileName="Assets\Scripts\resultNokori.cs" Line="19" Column="14" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="19" Column="2" />
-      <File FileName="Assets\Scripts\resultTime.cs" Line="18" Column="21" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="305" Column="29" />
+      <File FileName="Assets\Scripts\Loadtime.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FadeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SingletonMonoBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TextFade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Skip.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BgmControle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DrinkMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HighScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TotalScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SeControle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Black.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

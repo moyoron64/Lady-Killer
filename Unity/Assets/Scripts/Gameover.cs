@@ -13,7 +13,6 @@ public class Gameover : MonoBehaviour {
 	void Start () {
 		// 初期化
 		currentRemainTime = fadeTime;
-		spRenderer = GetComponent<SpriteRenderer>();
 			
 
 		
@@ -25,17 +24,12 @@ public class Gameover : MonoBehaviour {
 		
 		
 		
-		if ( currentRemainTime <= -2f ) {
+		if ( currentRemainTime <= -1f ) {
 			// 残り時間が無くなったら自分自身を消滅
-			Application.LoadLevel("Title");
+			FadeManager.Instance.LoadLevel("Title",1.0f);
 			return;
 		}
 		currentRemainTime -= Time.deltaTime;
 		
-		// フェードアウト
-		float alpha = currentRemainTime / fadeTime;
-		var color = spRenderer.color;
-		color.a = alpha;
-		spRenderer.color = color;
 	}
 }

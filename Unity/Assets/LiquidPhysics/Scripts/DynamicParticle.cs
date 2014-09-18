@@ -33,7 +33,8 @@ public class DynamicParticle : MonoBehaviour {
 			switch(newState){
 				case STATES.WATER:
 					particleImage.color=waterColor;// Set the color for the metaball shader to know how to draw each particle
-					rigidbody2D.gravityScale=1.0f; // To simulate Water density
+					rigidbody2D.gravityScale=10f; // To simulate Water density
+					rigidbody2D.mass=0.1f;
 				break;
 				case STATES.GAS:
 					particleImage.color=gasColor;

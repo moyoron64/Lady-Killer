@@ -29,7 +29,7 @@ public class Title : MonoBehaviour {
 				if(colition2d) {
 					RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
 				if(hitObject.collider.gameObject.name =="START"){
-					Application.LoadLevel("Prologue");
+					FadeManager.Instance.LoadLevel("Prologue",0.5f);
 				}
 				if(hitObject.collider.gameObject.name =="OPTION"){
 					Application.LoadLevel("Option");
