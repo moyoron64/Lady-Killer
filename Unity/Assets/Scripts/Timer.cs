@@ -136,7 +136,6 @@ public class Timer : MonoBehaviour {
 		if (number ==1 )n1.renderer.enabled = true;
 		if (number ==0 )n0.renderer.enabled = true;
 
-		Debug.Log (timer);
 
 
 		
