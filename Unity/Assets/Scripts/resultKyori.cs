@@ -11,12 +11,14 @@ public class resultKyori : MonoBehaviour {
 	public float strTop=60;
 	private float time;
 	public GUIStyle style;
-	
+
 	// Use this for initialization
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="距離   " + (int)Goal.distance + "mm";
+		float cm = System.Math.Abs(Goal.distance);
+		string kyori = cm.ToString ("f2");
+		Text="距離   " + kyori + "cm";
 	}
 	
 	// Update is called once per frame

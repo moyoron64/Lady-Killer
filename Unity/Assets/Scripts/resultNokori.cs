@@ -3,7 +3,6 @@ using System.Collections;
 
 public class resultNokori: MonoBehaviour {
 
-	private int nokori= 89;
 	public string Text;
 	public int depth =0;
 	public float strWidth=4;
@@ -16,7 +15,7 @@ public class resultNokori: MonoBehaviour {
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="残量" + (int)(((float)Player.waterLife/22)*100) + "%";
+		Text="残量   " + (int)(((float)Player.waterLife/22)*100) + "%";
 	}
 	
 	// Update is called once per frame

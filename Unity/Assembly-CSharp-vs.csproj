@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\Loadtime.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Rank.cs" />
+     <Compile Include="Assets\Scripts\ResultFade.cs" />
+     <Compile Include="Assets\Scripts\Resultjump.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SeControle.cs" />
      <Compile Include="Assets\Scripts\SingletonMonoBehaviour.cs" />

@@ -94,6 +94,8 @@ public class TotalScore : MonoBehaviour {
 	po79,
 	po70;
 
+	public static int score; 
+
 	// Use this for initialization
 	void Start () {
 		/*kihonkei
@@ -297,8 +299,8 @@ public class TotalScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		int score = (int)(3333333*Timer.timer/99  +  3333333 * (float)Player.waterLife/22 + 3333333 * Goal.distance /3);
-
+		score = (int)(3333333*Timer.timer/99  +  3333333 * (float)Player.waterLife/22 + 3333333 * Goal.distance /3);
+		PlayerPrefs.SetInt("Score", score);
 
 		score0 = score % 10;
 		score1 = score % 100 /10;

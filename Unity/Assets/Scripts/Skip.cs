@@ -60,7 +60,7 @@ public class Skip : MonoBehaviour {
 
 		if(skip == true){
 			
-			Application.LoadLevel("Load");
+				FadeManager.Instance.LoadLevel("Load",0.9f);
 			
 		}
 

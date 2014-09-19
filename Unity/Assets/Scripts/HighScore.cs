@@ -105,10 +105,11 @@ public class HighScore : MonoBehaviour {
 	po88,
 	po89,
 	po80;
-
+	int score;
 	
 	// Use this for initialization
 	void Start () {
+		score = 0;
 		/*kihonkei
 		po71 = GameObject.Find("koko1");
 		po72 = GameObject.Find("koko2");
@@ -331,7 +332,7 @@ public class HighScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		int score = 1000;
+		score =PlayerPrefs.GetInt("Score");;
 		
 		
 		score0 = score % 10;
@@ -343,7 +344,7 @@ public class HighScore : MonoBehaviour {
 		score6 = score % 10000000/1000000;
 		score7 = score / 100000000;
 		
-		PlayerPrefs.SetInt("Result", score);
+
 		
 		if(score0==0)po00.renderer.enabled= true;
 		if(score0==1)po01.renderer.enabled= true;
