@@ -21,10 +21,6 @@ public class Rank : MonoBehaviour {
 		NC = GameObject.Find("NC");
 		NS = GameObject.Find("NS");
 
-		AA = GameObject.Find("AA");
-		AB = GameObject.Find("AB");
-		AC = GameObject.Find("AC");
-		AS = GameObject.Find("AS");
 
 		TA.renderer.enabled = false;
 		TB.renderer.enabled = false;
@@ -41,10 +37,7 @@ public class Rank : MonoBehaviour {
 		NC.renderer.enabled = false;
 		NS.renderer.enabled = false;
 
-		AA.renderer.enabled = false;
-		AB.renderer.enabled = false;
-		AC.renderer.enabled = false;
-		AS.renderer.enabled = false;
+
 
 
 
@@ -54,12 +47,24 @@ public class Rank : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		/*
-			if(time>)TS.renderer.enabled = true;
-			if(time> && time <= )TA.renderer.enabled = true;
-			if(time > &&  time <=)TB.renderer.enabled = true;
-			if(time <=)TC.renderer.enabled = true;
-		*/
+		float kyori = System.Math.Abs(Goal.distance);
+
+
+		if(Timer.timer>90)TS.renderer.enabled = true;
+		if(Timer.timer>80 && Timer.timer <=90 )TA.renderer.enabled = true;
+		if(Timer.timer >70 &&  Timer.timer <=80)TB.renderer.enabled = true;
+		if(Timer.timer <=70)TC.renderer.enabled = true;
+
+		if(kyori>2)KC.renderer.enabled = true;
+		if(kyori>1 && kyori <=2 )KB.renderer.enabled = true;
+		if(kyori >0.5 &&  kyori <=1)KA.renderer.enabled = true;
+		if(kyori <=0.5)KS.renderer.enabled = true;
+
+		if(Player.waterLife>21)NS.renderer.enabled = true;
+		if(Player.waterLife>16 && Player.waterLife <=21 )NA.renderer.enabled = true;
+		if(Player.waterLife >8 &&  Player.waterLife <=16)NB.renderer.enabled = true;
+		if(Player.waterLife <=8)NC.renderer.enabled = true;
+
 	
 	}
 }

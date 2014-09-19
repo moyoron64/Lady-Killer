@@ -18,6 +18,8 @@ public class Player : MonoBehaviour {
 
 	public Vector3 startPosition; // ゲーム開始時の初期位置
 	public float jumpForce = 1f;
+	public float mainasu = 1f;
+	public float maxjump;
 
 	public static bool jump = false;
 	private bool isGrounded  = true ;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour {
 		startPosition = transform.localPosition;
 		waterLife = 22;
 		isActive = true;
+		maxjump = jumpForce;
 	}
 
 
@@ -41,9 +44,9 @@ public class Player : MonoBehaviour {
 			Invoke("resetStage", 3);
 		}
 
-		if (Input.GetKeyDown("a")) {
+		if (Input.GetKeyDown("a")&& jump == false &&  isGrounded==true) {
 			jump=true;
-			Debug.Log(Goal.distance);
+			jumpForce = maxjump;
 		}
 
 
@@ -88,8 +91,9 @@ public class Player : MonoBehaviour {
 		float g = Input.acceleration.magnitude - 1.0f;
 		lastZ = (lastZ + g) * 0.9f;
 
-		if ( lastZ > 0.7f && jump == false) {
+		if ( lastZ > 0.7f && jump == false &&  isGrounded==true) {
 			jump = true;
+			jumpForce = maxjump;
 		}
 
 		velocity = rigidbody2D.velocity;
@@ -100,18 +104,23 @@ public class Player : MonoBehaviour {
 
 	void Jump()
 	{
-		if(jump == true &&  isGrounded)
+		if(jump == true)
 		{
-			rigidbody2D.AddForce(Vector2.up * jumpForce);
+			rigidbody2D.velocity = (Vector2.up * jumpForce);
 			isGrounded=false;
+			jumpForce-= mainasu;
+			//if(jumpForce<0)jumpForce=0;
+
 		}
+
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "yuka")
+		if (col.gameObject.tag == "yuka") {
 			isGrounded = true;
 			jump = false;
+		}
 	}
 
 	void Move()

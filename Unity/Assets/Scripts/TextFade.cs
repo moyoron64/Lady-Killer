@@ -26,21 +26,19 @@ public class TextFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// 残り時間を更新
 
 
 
 		if ( goTime >= 0f ) {
-			// 残り時間が無くなったら自分自身を消滅
 			goTime -= Time.deltaTime;
 			return;
 		}
 		currentRemainTime -= Time.deltaTime;
 
-		// フェードアウト
 		float alpha = 1f - currentRemainTime / fadeTime;
 		var color = spRenderer.color;
 		color.a = alpha;
 		spRenderer.color = color;
+		Debug.Log (color);
 	}
 }
