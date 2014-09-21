@@ -22,7 +22,7 @@ public class Water : MonoBehaviour {
 		// 水が地面にこぼれたときの処理
 		if (!judgeWaterStatus() && isActive) {
 			isActive = false;
-			waterLost();
+			//waterLost();
 		}
 		if (Player.waterLife == 0 && Player.isActive) {
 			Invoke("resetStage", 3);

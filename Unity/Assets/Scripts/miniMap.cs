@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class miniMap : MonoBehaviour {
-	public GameObject glass;
-	public GameObject goal;
-	public GameObject miniBar;
-	public GameObject miniGlass;
+	public static GameObject glass;
+	public static GameObject goal;
+	public static GameObject miniBar;
+	public static GameObject miniGlass;
+	public float miniGlassPosition;
 
 	public Vector3 offset;
 
@@ -17,6 +18,7 @@ public class miniMap : MonoBehaviour {
 	void Start () {
 		miniBar = GameObject.Find("miniMapBar");
 		miniGlass = GameObject.Find("miniMapGlass");
+
 
 		glass = GameObject.Find("glass-kara");
 		goal = GameObject.Find("Goal");
@@ -32,10 +34,14 @@ public class miniMap : MonoBehaviour {
 
 		// グラスとゴールとの距離比率
 		float perce = currentDistance/startDistance;
-		Debug.Log(1-perce);
+		float barWidth = miniBar.renderer.bounds.size.x;
 
+		miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - ((1-perce) * barWidth), transform.position.y, 0);
 //		miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x)-0.8f, glass.transform.position.y + 7.7f ,glass.transform.position.z + offset.z);
 		//miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x), transform.position.y + 0.1f,glass.transform.position.z + offset.z);
-		miniGlass.transform.position = new Vector3(transform.localPosition.x + 22.0f, transform.position.y + 0.1f,glass.transform.position.z + offset.z);
+		//miniGlass.transform.position = new Vector3(transform.localPosition.x + 22.0f, transform.position.y + 0.1f,glass.transform.position.z + offset.z);
+
+
+
 	}
 }
