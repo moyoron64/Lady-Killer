@@ -4,7 +4,7 @@ using System.Collections;
 public class popWindow : MonoBehaviour {
 
 
-	GameObject pop1,pop2,pop3;
+	GameObject pop1,pop2,pop3,pop4,pop5;
 	public int game = 1;
 
 	// Use this for initialization
@@ -13,9 +13,13 @@ public class popWindow : MonoBehaviour {
 		pop1 = GameObject.Find("Pop");
 		pop2 = GameObject.Find("go");
 		pop3 = GameObject.Find("ready");
+		pop4 = GameObject.Find("stage");
+		pop5 = GameObject.Find("number");
 		pop1.renderer.enabled = false;
 		pop2.renderer.enabled = false;
 		pop3.renderer.enabled = false;
+		pop4.renderer.enabled = false;
+		pop5.renderer.enabled = false;
 	
 	}
 	
@@ -39,6 +43,8 @@ public class popWindow : MonoBehaviour {
 					pop1.renderer.enabled = true;
 					pop2.renderer.enabled = true;
 					pop3.renderer.enabled = true;
+					pop4.renderer.enabled = true;
+					pop5.renderer.enabled = true;
 					return;
 				}
 
@@ -47,6 +53,8 @@ public class popWindow : MonoBehaviour {
 					pop1.renderer.enabled = false;
 					pop2.renderer.enabled = false;
 					pop3.renderer.enabled = false;
+					pop4.renderer.enabled = false;
+					pop5.renderer.enabled = false;
 					game=1;
 				}
 				if(hitObject.collider.gameObject.name =="go"){

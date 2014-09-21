@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
 		waterLife = 22;
 		isActive = true;
 		maxjump = jumpForce;
+		jumpForce = 0;
 	}
 
 
@@ -64,29 +65,27 @@ public class Player : MonoBehaviour {
 	}
 	Rigidbody2D _cRigidbody2D;
 
-	public float moveSpeed = 5;
+	public static float moveSpeed = 5;
 
 	void FixedUpdate()
 	{
 
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
 
-		float x = Input.GetAxisRaw ("Horizontal");
+		//float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下
                 float y = Input.GetAxisRaw ("Vertical");
 
                 // 移動する向きを求める
-                Vector2 direction = new Vector2 (x, y).normalized;
+                //Vector2 direction = new Vector2 (x, y).normalized;
 
                 // 移動する向きとスピードを代入する
-                rigidbody2D.velocity = direction * speed;
+                //rigidbody2D.velocity = direction * speed;
 
 
 
 
-		Move();
-		Jump();
 
 		float g = Input.acceleration.magnitude - 1.0f;
 		lastZ = (lastZ + g) * 0.9f;
@@ -97,6 +96,11 @@ public class Player : MonoBehaviour {
 		}
 
 		velocity = rigidbody2D.velocity;
+
+		Move();
+		Jump();
+		Fall();
+
 
 
 	}
@@ -115,6 +119,21 @@ public class Player : MonoBehaviour {
 
 	}
 
+	void Fall()
+	{
+		/*
+		if(jump == false && isGrounded == false)
+		{
+			rigidbody2D.velocity = (Vector2.up * jumpForce);
+			isGrounded=false;
+			jumpForce-= mainasu;
+			//if(jumpForce<0)jumpForce=0;
+			
+		}
+		*/
+		
+	}
+
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "yuka") {
@@ -123,9 +142,20 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	
+	/*void OnCollisionExit2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "yuka") {
+			isGrounded = false;
+		}
+	}
+	*/
 	void Move()
 	{
-			cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+			//cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+		//rigidbody2D.velocity = (Vector2.right * moveSpeed * Input.acceleration.x);
+		rigidbody2D.AddForce(Vector2.right * moveSpeed * Input.acceleration.x );
+
 	}
 
 	// 水が全てこぼれたらステージをリセット

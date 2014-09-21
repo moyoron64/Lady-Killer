@@ -49,6 +49,7 @@
      <Compile Include="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" />
      <Compile Include="Assets\LiquidPhysics\Scripts\ParticleGenerator.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Alpha.cs" />
      <Compile Include="Assets\Scripts\BgmControle.cs" />
      <Compile Include="Assets\Scripts\Black.cs" />
      <Compile Include="Assets\Scripts\CameraControll.cs" />
