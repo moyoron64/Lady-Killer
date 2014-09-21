@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
 	public static bool jump = false;
 	private bool isGrounded  = true ;
 	float lastZ;
+	public float moveSpeed = 150f;
 
 	void Start(){
 		startPosition = transform.localPosition;
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour {
 	}
 	Rigidbody2D _cRigidbody2D;
 
-	public static float moveSpeed = 5;
+
 
 	void FixedUpdate()
 	{
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour {
 		//float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下
-                float y = Input.GetAxisRaw ("Vertical");
+                //float y = Input.GetAxisRaw ("Vertical");
 
                 // 移動する向きを求める
                 //Vector2 direction = new Vector2 (x, y).normalized;
@@ -152,7 +153,8 @@ public class Player : MonoBehaviour {
 	*/
 	void Move()
 	{
-			//cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+		//cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+
 		//rigidbody2D.velocity = (Vector2.right * moveSpeed * Input.acceleration.x);
 		rigidbody2D.AddForce(Vector2.right * moveSpeed * Input.acceleration.x );
 

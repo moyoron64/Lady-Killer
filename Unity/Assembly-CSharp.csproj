@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
+     <Compile Include="Assets\Scripts\readyGo.cs" />
      <Compile Include="Assets\Scripts\resultKyori.cs" />
      <Compile Include="Assets\Scripts\resultNokori.cs" />
      <Compile Include="Assets\Scripts\resultTime.cs" />
