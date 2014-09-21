@@ -32,8 +32,10 @@ public class miniMap : MonoBehaviour {
 
 		// グラスとゴールとの距離比率
 		float perce = currentDistance/startDistance;
+		Debug.Log(1-perce);
 
-
-		miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x)-0.8f, glass.transform.position.y + 7.7f ,glass.transform.position.z + offset.z);
+//		miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x)-0.8f, glass.transform.position.y + 7.7f ,glass.transform.position.z + offset.z);
+		//miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x), transform.position.y + 0.1f,glass.transform.position.z + offset.z);
+		miniGlass.transform.position = new Vector3(transform.localPosition.x + 22.0f, transform.position.y + 0.1f,glass.transform.position.z + offset.z);
 	}
 }
