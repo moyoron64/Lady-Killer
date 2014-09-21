@@ -81,7 +81,7 @@ public class Timer : MonoBehaviour {
 		n18.renderer.enabled = false;
 		n19.renderer.enabled = false;
 
-		timer = 99;
+		timer = 61;
 		
 	}
 	
