@@ -25,6 +25,8 @@ public class Player : MonoBehaviour {
 	private bool isGrounded  = true ;
 	float lastZ;
 	public float moveSpeed = 150f;
+	public float maxWalkSpeed = 1f; 
+	public static float sokudo;
 
 	void Start(){
 		startPosition = transform.localPosition;
@@ -43,7 +45,15 @@ public class Player : MonoBehaviour {
 
 		if (waterLife == 0 && isActive) {
 			isActive = false;
-			Invoke("resetStage", 3);
+			Invoke("resetStage", 1);
+		}
+
+		float g = Input.acceleration.magnitude - 1.0f;
+		lastZ = (lastZ + g) * 0.9f;
+		
+		if ( lastZ > 0.7f && jump == false &&  isGrounded==true) {
+			jump = true;
+			jumpForce = maxjump;
 		}
 
 		if (Input.GetKeyDown("a")&& jump == false &&  isGrounded==true) {
@@ -88,21 +98,22 @@ public class Player : MonoBehaviour {
 
 
 
-		float g = Input.acceleration.magnitude - 1.0f;
-		lastZ = (lastZ + g) * 0.9f;
 
-		if ( lastZ > 0.7f && jump == false &&  isGrounded==true) {
-			jump = true;
-			jumpForce = maxjump;
-		}
 
-		velocity = rigidbody2D.velocity;
+		sokudo = rigidbody2D.velocity.x;
 
 		Move();
 		Jump();
 		Fall();
 
 
+		
+
+		
+		if (Mathf.Abs (rigidbody2D.velocity.x) > maxWalkSpeed) {
+			rigidbody2D.velocity = new Vector2 (
+				Mathf.Sign(rigidbody2D.velocity.x) * maxWalkSpeed,rigidbody2D.velocity.y);
+		}
 
 	}
 
@@ -111,10 +122,11 @@ public class Player : MonoBehaviour {
 	{
 		if(jump == true)
 		{
-			rigidbody2D.velocity = (Vector2.up * jumpForce);
+			//rigidbody2D.velocity = (Vector2.up * jumpForce);
+			rigidbody2D.AddForce(Vector2.up * jumpForce);
 			isGrounded=false;
 			jumpForce-= mainasu;
-			//if(jumpForce<0)jumpForce=0;
+		    if(jumpForce<0)jumpForce=0;
 
 		}
 
@@ -153,10 +165,12 @@ public class Player : MonoBehaviour {
 	*/
 	void Move()
 	{
-		//cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
+		if (Mathf.Abs (rigidbody2D.velocity.x) < maxWalkSpeed) {
+			//cRigidbody2D.velocity = new Vector2(moveSpeed * Input.acceleration.x, cRigidbody2D.velocity.y);
 
-		//rigidbody2D.velocity = (Vector2.right * moveSpeed * Input.acceleration.x);
-		rigidbody2D.AddForce(Vector2.right * moveSpeed * Input.acceleration.x );
+			//rigidbody2D.velocity = (Vector2.right * moveSpeed * Input.acceleration.x);
+			rigidbody2D.AddForce (Vector2.right * moveSpeed * Input.acceleration.x);
+		}
 
 	}
 

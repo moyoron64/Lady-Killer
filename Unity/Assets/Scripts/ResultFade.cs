@@ -38,7 +38,7 @@ public class ResultFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		score = (int)(3333333*Timer.timer/99  +  3333333 * (float)Player.waterLife/22 + 3333333 * Goal.distance /3);
+		score = (int)(3333333*Timer.timer/60+  3333333 * (float)Player.waterLife/22 + 3333333 * Goal.distance /3);
 
 		if(score>9000000)CS.renderer.enabled = true;
 		if(score>7000000 && score <=9000000 )CA.renderer.enabled = true;
