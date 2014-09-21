@@ -2,7 +2,7 @@
 using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class Dish : MonoBehaviour {
+public class Dish2 : MonoBehaviour {
 	bool isReuse = true;
 	Vector3 startPosition;
 
@@ -15,19 +15,17 @@ public class Dish : MonoBehaviour {
 	void Update () {
 		if (isReuse) {
 
-			Vector2 direction = new Vector2 (10, 0).normalized;
+			Vector2 direction = new Vector2 (-1, 0).normalized;
 
-			rigidbody2D.velocity =  direction * Random.Range(50,60);
+			rigidbody2D.velocity =  direction * Random.Range(40,50);
 			isReuse = false;
 		}
 
-		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x) {
+		if (transform.localPosition.x < GameObject.Find("glass-kara").transform.localPosition.x) {
 			Invoke("resetPosition", 1);
 		}
 	}
-
-	public void resetPosition()
-	{
+	public void resetPosition() {
 			transform.localPosition = startPosition;
 			isReuse = true;
 	}
