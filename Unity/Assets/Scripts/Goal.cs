@@ -19,7 +19,7 @@ public class Goal : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Input.acceleration.x > -0.1) {
+		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.sokudo > -0.1) {
 			// ゴールの半径内かつ速度が１以下ならシーン移動
 			Application.LoadLevel ("Result2");
 		}

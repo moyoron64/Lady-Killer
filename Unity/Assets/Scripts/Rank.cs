@@ -50,10 +50,10 @@ public class Rank : MonoBehaviour {
 		float kyori = System.Math.Abs(Goal.distance);
 
 
-		if(Timer.timer>90)TS.renderer.enabled = true;
-		if(Timer.timer>80 && Timer.timer <=90 )TA.renderer.enabled = true;
-		if(Timer.timer >70 &&  Timer.timer <=80)TB.renderer.enabled = true;
-		if(Timer.timer <=70)TC.renderer.enabled = true;
+		if(Timer.timer>50)TS.renderer.enabled = true;
+		if(Timer.timer>40 && Timer.timer <=50 )TA.renderer.enabled = true;
+		if(Timer.timer >30 &&  Timer.timer <=40)TB.renderer.enabled = true;
+		if(Timer.timer <=30)TC.renderer.enabled = true;
 
 		if(kyori>2)KC.renderer.enabled = true;
 		if(kyori>1 && kyori <=2 )KB.renderer.enabled = true;
