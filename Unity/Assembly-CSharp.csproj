@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Loadtime.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Player2.cs" />
      <Compile Include="Assets\Scripts\Rank.cs" />
      <Compile Include="Assets\Scripts\ResultFade.cs" />
      <Compile Include="Assets\Scripts\Resultjump.cs" />
