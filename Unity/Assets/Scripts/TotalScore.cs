@@ -303,7 +303,7 @@ public class TotalScore : MonoBehaviour {
 		PlayerPrefs.SetInt("Score", score);
 		Debug.Log ("time"+(3333333*Timer.timer/60));
 		Debug.Log ("life"+(3333333 * (float)Player.waterLife/22));
-		Debug.Log ("kyori"+(3333333 * (10-Goal.distance) / 10));
+		Debug.Log ("kyori"+(3333333 * (10-System.Math.Abs(Goal.distance)) / 10));
 
 
 		score0 = score % 10;
