@@ -1,25 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Clear.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Resultjump.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="129" Column="32" />
-      <File FileName="Assets\Scripts\Resultjump.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Clear.cs" Line="33" Column="25" />
+      <File FileName="Assets\Scripts\Player.cs" Line="95" Column="69" />
+      <File FileName="Assets\Scripts\Resultjump.cs" Line="13" Column="3" />
+      <File FileName="Assets\Scripts\TotalScore.cs" Line="303" Column="1" />
       <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\resultNokori.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ResultFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Timer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Timer.cs" Line="95" Column="3" />
+      <File FileName="Assets\Scripts\Goal.cs" Line="36" Column="4" />
       <File FileName="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Alpha.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TextFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\popWindow2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\popWindow.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\readyGo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\resultTime.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\fadeMake.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Title.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Clear.cs" Line="13" Column="29" />
+      <File FileName="Assets\Scripts\Title.cs" Line="35" Column="38" />
+      <File FileName="Assets\Scripts\resultKyori.cs" Line="19" Column="29" />
+      <File FileName="Assets\Scripts\ResultFade.cs" Line="39" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
