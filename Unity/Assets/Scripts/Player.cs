@@ -39,6 +39,9 @@ public class Player : MonoBehaviour {
 
 	void Update()
 	{
+
+		if(Goal.clearFlag == true )return;
+
 		if (Timer.timer < 0.0f && isActive) {
 			Invoke("resetStage", 1);
 		}
@@ -82,7 +85,7 @@ public class Player : MonoBehaviour {
 	{
 
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
-
+		if(Goal.clearFlag == true )return;
 		//float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下
@@ -101,6 +104,7 @@ public class Player : MonoBehaviour {
 
 
 		sokudo = rigidbody2D.velocity.x;
+		Debug.Log (sokudo);
 
 		Move();
 		Jump();

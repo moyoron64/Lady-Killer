@@ -88,7 +88,7 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		timer -= Time.deltaTime;
+		if(Goal.clearFlag ==false)timer -= Time.deltaTime;
 		number10 = (int)(timer/10);
 		number = (int)(timer%10);
 

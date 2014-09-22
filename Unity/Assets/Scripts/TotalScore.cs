@@ -299,8 +299,12 @@ public class TotalScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		score = (int)( 3333333*Timer.timer/60  +  3333333 * (float)Player.waterLife/22 + 3333333 * (10-Goal.distance) / 10 );
+		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((10-System.Math.Abs(Goal.distance) )/ 10)) );
 		PlayerPrefs.SetInt("Score", score);
+		Debug.Log ("time"+(3333333*Timer.timer/60));
+		Debug.Log ("life"+(3333333 * (float)Player.waterLife/22));
+		Debug.Log ("kyori"+(3333333 * (10-Goal.distance) / 10));
+
 
 		score0 = score % 10;
 		score1 = score % 100 /10;

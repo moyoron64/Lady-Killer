@@ -2,17 +2,14 @@
 using System.Collections;
 
 public class Clear : MonoBehaviour {
-	Animation _anim;
-	private float time = 0.0f;
+	Animation anim;
+	public float time = 2.0f;
 
 	// Use this for initialization
 
 	void Start () {
-		animation.Stop("clear");
 
-		animation.Stop("Clear 1");
-
-		animation.Stop("Clear");
+		anim = GetComponent<Animation>();
 
 	
 
@@ -22,12 +19,18 @@ public class Clear : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		time = animation[animation.clip.name].time;
-		animation.Stop();
+		if (Goal.clearFlag == true) {
+			anim.Play ("clear");
+		}
 
-
+		if (time < 0) {
+			result();
+		}
+		
 	
 	}
-
+	void result(){
+		Application.LoadLevel("Result2");
+	}
 
 }
