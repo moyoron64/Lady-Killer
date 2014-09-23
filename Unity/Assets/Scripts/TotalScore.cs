@@ -293,17 +293,21 @@ public class TotalScore : MonoBehaviour {
 		po78.renderer.enabled = false;
 		po79.renderer.enabled = false;
 		po70.renderer.enabled = false;
-	
+
+		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+		int sumScore =PlayerPrefs.GetInt("sumScore");
+		sumScore += score; 
+		PlayerPrefs.SetInt("sumScore", sumScore);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((10-System.Math.Abs(Goal.distance) )/ 10)) );
+		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
 		PlayerPrefs.SetInt("Score", score);
-		Debug.Log ("time"+(3333333*Timer.timer/60));
-		Debug.Log ("life"+(3333333 * (float)Player.waterLife/22));
-		Debug.Log ("kyori"+(3333333 * (10-System.Math.Abs(Goal.distance)) / 10));
+		//Debug.Log ("time"+(3333333*Timer.timer/60));
+		//Debug.Log ("life"+(3333333 * (float)Player.waterLife/22));
+		//Debug.Log ("kyori"+(3333333 * (10-System.Math.Abs(Goal.distance)) / 10));
 
 
 		score0 = score % 10;
