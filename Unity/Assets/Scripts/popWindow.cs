@@ -58,8 +58,9 @@ public class popWindow : MonoBehaviour {
 					game=1;
 				}
 				if(hitObject.collider.gameObject.name =="go"){
-					Application.LoadLevel("Title");
 					Time.timeScale = 1;
+					Application.LoadLevel("Title");
+
 				}
 			}
 		}
