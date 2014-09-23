@@ -22,24 +22,29 @@ public class Player : MonoBehaviour {
 	public float maxjump;
 
 	public static bool jump = false;
-	private bool isGrounded  = true ;
+	public static bool isGrounded  = true ;
 	float lastZ;
 	public float moveSpeed = 150f;
 	public float maxWalkSpeed = 1f; 
 	public static float sokudo;
+	GameObject slip1,slip2,slip3;
 
 	void Start(){
 		startPosition = transform.localPosition;
 		waterLife = 22;
 		isActive = true;
 		maxjump = jumpForce;
+		isGrounded = true;
 		jumpForce = 0;
+		slip1 = GameObject.Find("slip1");
+		slip2 = GameObject.Find("slip2");
+		slip3 = GameObject.Find("slip3");
 	}
 
 
 	void Update()
 	{
-
+		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
 		if(Goal.clearFlag == true )return;
 
 		if (Timer.timer < 0.0f && isActive) {
@@ -104,11 +109,11 @@ public class Player : MonoBehaviour {
 
 
 		sokudo = rigidbody2D.velocity.x;
-		Debug.Log (sokudo);
 
 		Move();
 		Jump();
 		Fall();
+		Slip();
 
 
 		
@@ -156,6 +161,11 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.tag == "yuka") {
 			isGrounded = true;
 			jump = false;
+			//Debug.Log("slipslipslipslisplsispslispslisplsip");
+		}
+
+		if (col.gameObject.tag == "slip") {
+			rigidbody2D.AddForce (Vector2.right *  rigidbody2D.velocity.x * 1000000f);
 		}
 	}
 
@@ -177,6 +187,14 @@ public class Player : MonoBehaviour {
 		}
 
 	}
+
+	void Slip(){
+		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 1) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 5f);
+		}
+
+	}
+
 
 	// 水が全てこぼれたらステージをリセット
 	void resetStage()

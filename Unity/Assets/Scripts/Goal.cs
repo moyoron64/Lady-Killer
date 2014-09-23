@@ -21,7 +21,7 @@ public class Goal : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.sokudo > -0.01) {
+		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.sokudo > -0.01 && Player.isGrounded == true  ) {
 			// ゴールの半径内かつ速度が１以下ならシーン移動
 			//Application.LoadLevel ("Result2");
 			clearFlag = true;
@@ -32,7 +32,7 @@ public class Goal : MonoBehaviour {
 	bool checkDistanceWithGlass(float goalPosition, float glassPosition) {
 
 		if (clearFlag == false) {
-			distance = glassPosition - goalPosition;
+			distance = System.Math.Abs(glassPosition - goalPosition);
 
 			if (distance < xSize / 2) {
 					return true;
