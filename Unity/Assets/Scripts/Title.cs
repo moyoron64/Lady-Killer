@@ -5,7 +5,12 @@ public class Title : MonoBehaviour {
 
 
 	void Start () {
+
+
 		SoundManager.Instance.PlayBGM(0);
+		int score = 0;
+		PlayerPrefs.SetInt("sumScore", score);
+
 	}
 
 	

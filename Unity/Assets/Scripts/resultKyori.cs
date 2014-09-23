@@ -18,7 +18,7 @@ public class resultKyori : MonoBehaviour {
 		GUI.depth = depth;
 		float cm = System.Math.Abs(Goal.distance);
 		string kyori = cm.ToString ("f2");
-		Text="距離   " + kyori + "cm";
+		Text="  距離    " + kyori + "cm";
 	}
 	
 	// Update is called once per frame

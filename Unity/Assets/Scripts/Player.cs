@@ -26,8 +26,10 @@ public class Player : MonoBehaviour {
 	float lastZ;
 	public float moveSpeed = 150f;
 	public float maxWalkSpeed = 1f; 
-	public static float sokudo;
+	public static float ySokudo;
+	public static float xSokudo;
 	GameObject slip1,slip2,slip3;
+	private int slip1Count,slip2Count,slip3Count;
 
 	void Start(){
 		startPosition = transform.localPosition;
@@ -39,6 +41,9 @@ public class Player : MonoBehaviour {
 		slip1 = GameObject.Find("slip1");
 		slip2 = GameObject.Find("slip2");
 		slip3 = GameObject.Find("slip3");
+		slip1Count = 0;
+		slip2Count = 0;
+		slip3Count = 0;
 	}
 
 
@@ -59,7 +64,7 @@ public class Player : MonoBehaviour {
 		float g = Input.acceleration.magnitude - 1.0f;
 		lastZ = (lastZ + g) * 0.9f;
 		
-		if ( lastZ > 0.7f && jump == false &&  isGrounded==true) {
+		if ( lastZ > 0.61f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 		}
@@ -108,7 +113,8 @@ public class Player : MonoBehaviour {
 
 
 
-		sokudo = rigidbody2D.velocity.x;
+		xSokudo = rigidbody2D.velocity.x;
+		ySokudo = rigidbody2D.velocity.y;
 
 		Move();
 		Jump();
@@ -158,15 +164,15 @@ public class Player : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "yuka") {
+		if (col.gameObject.tag == "yuka" && ySokudo <= 0   ) {
 			isGrounded = true;
 			jump = false;
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
 		}
 
-		if (col.gameObject.tag == "slip") {
-			rigidbody2D.AddForce (Vector2.right *  rigidbody2D.velocity.x * 1000000f);
-		}
+		/*if (col.gameObject.tag == "slip") {
+			rigidbody2D.AddForce (Vector2.right *  rigidbody2D.velocity.x * 600f);
+		}*/
 	}
 
 	
@@ -175,8 +181,8 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.tag == "yuka") {
 			isGrounded = false;
 		}
-	}
-	*/
+	}*/
+
 	void Move()
 	{
 		if (Mathf.Abs (rigidbody2D.velocity.x) < maxWalkSpeed) {
@@ -189,8 +195,9 @@ public class Player : MonoBehaviour {
 	}
 
 	void Slip(){
-		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 1) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 5f);
+		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 100f);
+			slip1Count++;
 		}
 
 	}

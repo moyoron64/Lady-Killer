@@ -1,36 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\haikeiMake.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\resultKyori.cs">
     <Files>
-      <File FileName="Assets\Scripts\Clear.cs" Line="32" Column="10" />
-      <File FileName="Assets\Scripts\Player.cs" Line="10" Column="47" />
+      <File FileName="Assets\Scripts\haikeiMake.cs" Line="52" Column="1" />
       <File FileName="Assets\Scripts\Resultjump.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Timer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Goal.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Clear.cs" Line="33" Column="25" />
-      <File FileName="Assets\Scripts\Player.cs" Line="95" Column="69" />
-      <File FileName="Assets\Scripts\Resultjump.cs" Line="12" Column="2" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="303" Column="1" />
-      <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Timer.cs" Line="95" Column="3" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="28" Column="4" />
->>>>>>> master
-      <File FileName="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Alpha.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TextFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\readyGo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\resultTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\fadeMake.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\popWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Goal.cs" Line="24" Column="71" />
+      <File FileName="Assets\Scripts\Player.cs" Line="167" Column="46" />
+      <File FileName="Assets\Scripts\TotalScore.cs" Line="306" Column="138" />
+      <File FileName="Assets\Scripts\HighScore.cs" Line="335" Column="3" />
       <File FileName="Assets\Scripts\Title.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\resultKyori.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ResultFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\haikeiMake.cs" Line="7" Column="22" />
+      <File FileName="Assets\Scripts\Aspect.cs" Line="19" Column="4" />
+      <File FileName="Assets\Scripts\Water.cs" Line="44" Column="12" />
+      <File FileName="Assets\Scripts\Rank.cs" Line="53" Column="48" />
+      <File FileName="Assets\Scripts\ResultFade.cs" Line="41" Column="102" />
+      <File FileName="Assets\Scripts\resultTime.cs" Line="41" Column="1" />
+      <File FileName="Assets\Scripts\resultKyori.cs" Line="21" Column="16" />
+      <File FileName="Assets\Scripts\resultNokori.cs" Line="18" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
