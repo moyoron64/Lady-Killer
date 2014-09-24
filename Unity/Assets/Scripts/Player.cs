@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
 	public static bool isGrounded  = true ;
 	float lastZ;
 	public float moveSpeed = 150f;
-	public float maxWalkSpeed = 1f; 
+	public float maxWalkSpeed = 1f;
 	public static float ySokudo;
 	public static float xSokudo;
 	GameObject slip1,slip2,slip3;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour {
 
 		float g = Input.acceleration.magnitude - 1.0f;
 		lastZ = (lastZ + g) * 0.9f;
-		
+
 		if ( lastZ > 0.61f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
@@ -119,12 +119,12 @@ public class Player : MonoBehaviour {
 		Move();
 		Jump();
 		Fall();
-		Slip();
+		//Slip();
 
 
-		
 
-		
+
+
 		if (Mathf.Abs (rigidbody2D.velocity.x) > maxWalkSpeed) {
 			rigidbody2D.velocity = new Vector2 (
 				Mathf.Sign(rigidbody2D.velocity.x) * maxWalkSpeed,rigidbody2D.velocity.y);
@@ -156,10 +156,10 @@ public class Player : MonoBehaviour {
 			isGrounded=false;
 			jumpForce-= mainasu;
 			//if(jumpForce<0)jumpForce=0;
-			
+
 		}
 		*/
-		
+
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
@@ -175,7 +175,7 @@ public class Player : MonoBehaviour {
 		}*/
 	}
 
-	
+
 	/*void OnCollisionExit2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "yuka") {
@@ -194,13 +194,14 @@ public class Player : MonoBehaviour {
 
 	}
 
-	void Slip(){
+	/*void Slip(){
 		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0) {
 			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 100f);
 			slip1Count++;
 		}
 
 	}
+	*/
 
 
 	// 水が全てこぼれたらステージをリセット
