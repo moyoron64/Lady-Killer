@@ -20,7 +20,7 @@ public class Resultjump : MonoBehaviour {
 		// ゲーム中ではなく、タッチ直後であればtrueを返す。
 		if (touch.phase == TouchPhase.Began) {
 			
-			Application.LoadLevel("Scene1");
+			Application.LoadLevel("Scene3-2");
 			return;
 			
 		}
