@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
 	public static float xSokudo;
 	GameObject slip1,slip2,slip3;
 	private int slip1Count,slip2Count,slip3Count;
+	public int slip = 0;
 
 	void Start(){
 		startPosition = transform.localPosition;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour {
 		isActive = true;
 		maxjump = jumpForce;
 		isGrounded = true;
+		jump = false;
 		jumpForce = 0;
 		slip1 = GameObject.Find("slip1");
 		slip2 = GameObject.Find("slip2");
@@ -119,7 +121,7 @@ public class Player : MonoBehaviour {
 		Move();
 		Jump();
 		Fall();
-		//Slip();
+		if(slip==1)Slip();
 
 
 
@@ -194,14 +196,14 @@ public class Player : MonoBehaviour {
 
 	}
 
-	/*void Slip(){
-		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0) {
+	void Slip(){
+		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2.5 && slip1Count ==0) {
 			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 100f);
 			slip1Count++;
 		}
 
 	}
-	*/
+
 
 
 	// 水が全てこぼれたらステージをリセット
