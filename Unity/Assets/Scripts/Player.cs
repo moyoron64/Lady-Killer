@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
 	private int slip1Count,slip2Count,slip3Count,slip4Count;
 	public int slip = 0;
 	public float zCheck;
+	public static bool failedFlag;
 	void Start(){
 		waterColor = new Color(0.5f, 1.0f, 1.0f, 1.0f);
 		startPosition = transform.localPosition;
@@ -50,6 +51,7 @@ public class Player : MonoBehaviour {
 		slip2Count = 0;
 		slip3Count = 0;
 		slip4Count = 0;
+		failedFlag = false;
 	}
 
 
@@ -57,7 +59,7 @@ public class Player : MonoBehaviour {
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
 		float zCheck;
-		if(Goal.clearFlag == true )return;
+		if(Goal.clearFlag == true || failedFlag == true )return;
 
 		if (Timer.timer < 0.0f && isActive) {
 			Invoke("resetStage", 1);
@@ -238,19 +240,15 @@ public class Player : MonoBehaviour {
 	void resetStage()
 	{
 
+
+
+		failedFlag = true;
 		/*
 		transform.localPosition = startPosition;
 		transform.eulerAngles = new Vector3(0, 0, 0);
 		*/
 
-		life --;
-
-		if (life == -1 ) {
-			Application.LoadLevel("Gameover");
-			return;
-		}
-
-		Application.LoadLevel (Application.loadedLevelName);
+		
 
 
 	}

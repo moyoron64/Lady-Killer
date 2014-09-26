@@ -115,7 +115,7 @@ public class DynamicParticle : MonoBehaviour {
 		switch(sceneName) {
 			case "Scene1":
 			case "Scene2":
-				_waterColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+				_waterColor = new Color(0.8f, 0.2f, 0.2f, 1.0f);
 				break;
 			case "Scene3":
 			case "Scene4":
