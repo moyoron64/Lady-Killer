@@ -78,7 +78,7 @@ public class Player2 : MonoBehaviour {
                 float y = Input.GetAxisRaw ("Vertical");
 
                 // 移動する向きを求める
-                Vector2 direction = new Vector2 (10000, y).normalized;
+                Vector2 direction = new Vector2 (-10000, y).normalized;
 
                 // 移動する向きとスピードを代入する
                 rigidbody2D.velocity = direction * speed;

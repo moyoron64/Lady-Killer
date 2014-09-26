@@ -37,13 +37,13 @@ public class miniMap : MonoBehaviour {
 		float barWidth = miniBar.renderer.bounds.size.x;
 
 		if (isOnBar(barWidth)) {
-			miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - ((1-perce) * barWidth), transform.position.y, 0);
+			miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - 0.22f - ((1-perce) * barWidth), transform.position.y - 0.13f, 0);
 		}
 	}
 
 	public bool isOnBar(float barWidth)
 	{
-		if (miniGlass.transform.localPosition.x < transform.localPosition.x - barWidth/2) {
+		if (miniGlass.transform.localPosition.x - 0.22f < transform.localPosition.x - barWidth/2) {
 			return false;
 		}
 
