@@ -28,28 +28,33 @@ public class Player : MonoBehaviour {
 	public float maxWalkSpeed = 1f;
 	public static float ySokudo;
 	public static float xSokudo;
-	GameObject slip1,slip2,slip3;
-	private int slip1Count,slip2Count,slip3Count;
-
+	GameObject slip1,slip2,slip3,slip4;
+	private int slip1Count,slip2Count,slip3Count,slip4Count;
+	public int slip = 0;
+	public float zCheck;
 	void Start(){
 		startPosition = transform.localPosition;
 		waterLife = 22;
 		isActive = true;
 		maxjump = jumpForce;
 		isGrounded = true;
+		jump = false;
 		jumpForce = 0;
 		slip1 = GameObject.Find("slip1");
 		slip2 = GameObject.Find("slip2");
 		slip3 = GameObject.Find("slip3");
+		slip4 = GameObject.Find("slip4");
 		slip1Count = 0;
 		slip2Count = 0;
 		slip3Count = 0;
+		slip4Count = 0;
 	}
 
 
 	void Update()
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
+		float zCheck;
 		if(Goal.clearFlag == true )return;
 
 		if (Timer.timer < 0.0f && isActive) {
@@ -61,10 +66,12 @@ public class Player : MonoBehaviour {
 			Invoke("resetStage", 1);
 		}
 
-		float g = Input.acceleration.magnitude - 1.0f;
-		lastZ = (lastZ + g) * 0.9f;
+		float g = Input.acceleration.magnitude;
 
-		if ( lastZ > 0.61f && jump == false &&  isGrounded==true) {
+
+		Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
+		
+		if ( g > 1.425f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 		}
@@ -73,6 +80,7 @@ public class Player : MonoBehaviour {
 			jump=true;
 			jumpForce = maxjump;
 		}
+		if (transform.position.y < -1)resetStage();
 
 
 	}
@@ -118,8 +126,8 @@ public class Player : MonoBehaviour {
 
 		Move();
 		Jump();
-		Fall();
-		//Slip();
+		//Fall();
+		if(slip==1)Slip();
 
 
 
@@ -129,6 +137,8 @@ public class Player : MonoBehaviour {
 			rigidbody2D.velocity = new Vector2 (
 				Mathf.Sign(rigidbody2D.velocity.x) * maxWalkSpeed,rigidbody2D.velocity.y);
 		}
+
+
 
 	}
 
@@ -147,9 +157,9 @@ public class Player : MonoBehaviour {
 
 	}
 
-	void Fall()
+	/*void Fall()
 	{
-		/*
+
 		if(jump == false && isGrounded == false)
 		{
 			rigidbody2D.velocity = (Vector2.up * jumpForce);
@@ -158,22 +168,24 @@ public class Player : MonoBehaviour {
 			//if(jumpForce<0)jumpForce=0;
 
 		}
-		*/
 
-	}
 
-	void OnCollisionEnter2D(Collision2D col)
+	}*/
+
+	/*void OnCollisionEnter2D(Collision2D col)
 	{
+
+
 		if (col.gameObject.tag == "yuka" && ySokudo <= 0   ) {
 			isGrounded = true;
 			jump = false;
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
 		}
 
-		/*if (col.gameObject.tag == "slip") {
+		if (col.gameObject.tag == "slip") {
 			rigidbody2D.AddForce (Vector2.right *  rigidbody2D.velocity.x * 600f);
-		}*/
-	}
+		}
+	}*/
 
 
 	/*void OnCollisionExit2D(Collision2D col)
@@ -194,14 +206,30 @@ public class Player : MonoBehaviour {
 
 	}
 
-	/*void Slip(){
-		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 100f);
+	void Slip(){
+		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0 && Player.isGrounded == true) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
 			slip1Count++;
 		}
 
+		if (System.Math.Abs (slip2.transform.position.x - this.transform.position.x) < 2 && slip2Count ==0 && Player.isGrounded == true) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			slip2Count++;
+		}
+
+		if (System.Math.Abs (slip3.transform.position.x - this.transform.position.x) < 2 && slip3Count ==0 && Player.isGrounded == true) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			slip3Count++;
+		}
+
+		if (System.Math.Abs (slip4.transform.position.x - this.transform.position.x) < 2.5 && slip4Count ==0 && Player.isGrounded == true) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			slip4Count++;
+		}
+
+
 	}
-	*/
+
 
 
 	// 水が全てこぼれたらステージをリセット

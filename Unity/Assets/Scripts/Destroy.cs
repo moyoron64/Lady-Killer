@@ -34,10 +34,7 @@ public class Destroy : MonoBehaviour {
 		Vector3 positionInScreen = _setCamera.WorldToViewportPoint(transform.position);
 		positionInScreen.z = transform.position.z;
 		
-		if (positionInScreen.x >= negativeMargin 
-		    //||
-		    //positionInScreen.x >= positiveMargin 
-		    )
+		if (positionInScreen.x >= negativeMargin  ||  positionInScreen.x >= positiveMargin  && transform.position.x > CameraControll.xCameraPosition    )
 		{
 			return true;
 		} else {

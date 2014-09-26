@@ -4,6 +4,7 @@ using System.Collections;
 public class fadeMake : MonoBehaviour {
 
 	public float startTime = 1f;
+	public string goScene;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class fadeMake : MonoBehaviour {
 			startTime -= Time.deltaTime;
 			return;
 		}
-		FadeManager.Instance.LoadLevel("Title",2f);
+		FadeManager.Instance.LoadLevel(goScene,2f);
 	
 	}
 }

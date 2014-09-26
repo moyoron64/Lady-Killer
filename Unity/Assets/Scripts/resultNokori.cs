@@ -15,7 +15,7 @@ public class resultNokori: MonoBehaviour {
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="  残量     " + (int)(((float)Player.waterLife/22)*100) + "%";
+		Text="  残量       " + (int)(((float)Player.waterLife/22)*100) + "%";
 	}
 	
 	// Update is called once per frame

@@ -15,14 +15,16 @@ public class Dish : MonoBehaviour {
 	void Update () {
 		if (isReuse) {
 
-			Vector2 direction = new Vector2 (10, 0).normalized;
+			//Vector2 direction = new Vector2 (10, 0).normalized;
 
-			rigidbody2D.velocity =  direction * Random.Range(50,60);
 			isReuse = false;
 		}
-
-		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x) {
-			Invoke("resetPosition", 1);
+		Vector2 direction = new Vector2 (10, 0).normalized;
+		
+		rigidbody2D.velocity =  direction * 16;
+		
+		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x + 7f) {
+			resetPosition();
 		}
 	}
 

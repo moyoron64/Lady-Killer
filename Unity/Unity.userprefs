@@ -1,24 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\haikeiMake.cs">
     <Files>
-      <File FileName="Assets\Scripts\Resultjump.cs" Line="16" Column="18" />
-      <File FileName="Assets\Scripts\haikeiMake.cs" Line="28" Column="3" />
+      <File FileName="Assets\Scripts\Destroy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Resultjump.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\haikeiMake.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraControll.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\popWindow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="34" Column="28" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Goal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="12" Column="34" />
       <File FileName="Assets\Scripts\TotalScore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HighScore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Title.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Aspect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Water.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ResultFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\resultTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\resultKyori.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\resultNokori.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Destroy.cs" Line="39" Column="9" />
+      <File FileName="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Dish3.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Water.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\jumpCheck.cs" Line="27" Column="14" />
+      <File FileName="Assets\Scripts\TextFade.cs" Line="33" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
