@@ -36,12 +36,21 @@ public class miniMap : MonoBehaviour {
 		float perce = currentDistance/startDistance;
 		float barWidth = miniBar.renderer.bounds.size.x;
 
-		miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - ((1-perce) * barWidth), transform.position.y, 0);
-//		miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x)-0.8f, glass.transform.position.y + 7.7f ,glass.transform.position.z + offset.z);
-		//miniGlass.transform.position = new Vector3(glass.transform.position.x + (perce * transform.lossyScale.x), transform.position.y + 0.1f,glass.transform.position.z + offset.z);
-		//miniGlass.transform.position = new Vector3(transform.localPosition.x + 22.0f, transform.position.y + 0.1f,glass.transform.position.z + offset.z);
+		if (isOnBar(barWidth)) {
+			miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - ((1-perce) * barWidth), transform.position.y, 0);
+		}
+	}
 
+	public bool isOnBar(float barWidth)
+	{
+		if (miniGlass.transform.localPosition.x < transform.localPosition.x - barWidth/2) {
+			return false;
+		}
 
+		if (transform.localPosition.x + barWidth/2 < miniGlass.transform.localPosition.x) {
+			return false;
+		}
 
+		return true;
 	}
 }
