@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 --------------------------------------------------------*/
 	static public int life = 3;
 	static public int waterLife = 22; // 中身の残量
+	static public Color waterColor;         // 中身の色
 	static public bool isActive = true;
 	static public float xPosition;
 	static public Vector2 velocity;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour {
 	public int slip = 0;
 	public float zCheck;
 	void Start(){
+		waterColor = new Color(0.5f, 1.0f, 1.0f, 1.0f);
 		startPosition = transform.localPosition;
 		waterLife = 22;
 		isActive = true;
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour {
 
 
 		Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
-		
+
 		if ( g > 1.425f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;

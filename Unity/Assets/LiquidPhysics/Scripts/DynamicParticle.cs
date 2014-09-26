@@ -32,8 +32,8 @@ public class DynamicParticle : MonoBehaviour {
 			rigidbody2D.velocity=new Vector2();	// Reset the particle velocity
 			switch(newState){
 				case STATES.WATER:
-					//particleImage.color=waterColor;// Set the color for the metaball shader to know how to draw each particle
-					particleImage.color=new Color(1f, 0.92f, 0.016f, 0.5f);;// Set the color for the metaball shader to know how to draw each particle
+						//particleImage.color=new Color(1f, 0.92f, 0.016f, 0.5f);// Set the color for the metaball shader to know how to draw each particle
+						particleImage.color=getColorWithScene(Application.loadedLevelName);// Set the color for the metaball shader to know how to draw each particle
 					rigidbody2D.gravityScale=5f; // To simulate Water density
 					rigidbody2D.mass=0.01f;
 				break;
@@ -106,6 +106,34 @@ public class DynamicParticle : MonoBehaviour {
 			}
 		}
 
+	}
+
+	Color getColorWithScene(string sceneName) {
+		Color _waterColor;
+
+
+		switch(sceneName) {
+			case "Scene1":
+			case "Scene2":
+				_waterColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+				break;
+			case "Scene3":
+			case "Scene4":
+				_waterColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+				break;
+			case "Scene5":
+			case "Scene6":
+				_waterColor = new Color(0.0f, 0.0f, 1.0f, 1.0f);
+				break;
+			case "Scene7":
+			case "Scene8":
+				_waterColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+				break;
+			default :
+				_waterColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+				break;
+		}
+		return _waterColor;
 	}
 
 }
