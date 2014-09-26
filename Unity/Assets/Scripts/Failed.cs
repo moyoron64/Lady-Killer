@@ -11,15 +11,12 @@ public class Failed : MonoBehaviour {
 
 		anim = GetComponent<Animation>();
 
-	
-
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Goal.clearFlag == true) {
+		if (Player.failedFlag == true) {
 			anim.Play ("clear");
 		}
 
@@ -30,6 +27,15 @@ public class Failed : MonoBehaviour {
 	
 	}
 	void result(){
+
+
+		Player.life --;
+		
+		if (Player.life == -1 ) {
+			Application.LoadLevel("Gameover");
+			return;
+		}
+		
 		Application.LoadLevel (Application.loadedLevelName);
 	}
 
