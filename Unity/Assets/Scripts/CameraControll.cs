@@ -8,13 +8,17 @@ public class CameraControll : MonoBehaviour {
 
 	public Vector3 offset;
 	public static float xCameraPosition;
+	public float bottom = 8;
+	private float firstYKakuteru;
 
 	// Use this for initialization
 	void Start () {
 		this.kakuteru = GameObject.FindGameObjectWithTag("kakuteru");
 		this.goalPosition = GameObject.FindGameObjectWithTag("ok");
-
+		firstYKakuteru = this.kakuteru.transform.position.y;
 		this.offset = this.transform.position - this.kakuteru.transform.position;
+
+
 
 	}
 
@@ -27,19 +31,37 @@ public class CameraControll : MonoBehaviour {
 
 		if(this.transform.position.x < this.goalPosition.transform.position.x )return;
 
-		this.transform.position = new Vector3(this.transform.position.x, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
+		if (Player.jump == false) {	
+
+			if(this.transform.position.y >= firstYKakuteru - 0.15f )this.transform.position = new Vector3(this.transform.position.x, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
 	
-		if (Player.jump == true) {
-			if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3) {
+
+			if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3  && this.transform.position.y >= firstYKakuteru - 0.15f) {
 					this.transform.position = new Vector3 (this.kakuteru.transform.position.x - 3, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
 			}
-		}
 
-		if (Player.jump == false) {
-			if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3) {
+			if (this.transform.position.y < firstYKakuteru - 0.15f) {
 				this.transform.position = new Vector3 (this.kakuteru.transform.position.x - 3, this.transform.position.y , this.kakuteru.transform.position.z + this.offset.z);
 			}
 		}
-		
+
+		if (Player.jump == true) {
+			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.kakuteru.transform.position.z + this.offset.z);
+			
+
+			if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3  && this.transform.position.y >= firstYKakuteru - 0.15f) {
+				this.transform.position = new Vector3 (this.kakuteru.transform.position.x - 3, this.transform.position.y , this.kakuteru.transform.position.z + this.offset.z);
+			}
+
+			if (this.transform.position.y < firstYKakuteru - 0.15f) {
+				this.transform.position = new Vector3 (this.kakuteru.transform.position.x - 3, this.transform.position.y , this.kakuteru.transform.position.z + this.offset.z);
+				
+			}
+
+		}
+
+
+
+
 	}
 }

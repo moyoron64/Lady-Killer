@@ -26,7 +26,7 @@ public class Gameover : MonoBehaviour {
 		
 		if ( currentRemainTime <= -1f ) {
 			// 残り時間が無くなったら自分自身を消滅
-			FadeManager.Instance.LoadLevel("Title",1.0f);
+			FadeManager.Instance.LoadLevel("Title",3.0f);
 			return;
 		}
 		currentRemainTime -= Time.deltaTime;

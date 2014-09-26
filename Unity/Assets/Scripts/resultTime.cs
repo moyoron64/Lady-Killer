@@ -16,7 +16,7 @@ public class resultTime : MonoBehaviour {
 	void Start()
 	{
 		GUI.depth = depth;
-		Text="残り時間    " + (int)Timer.timer +"秒";
+		Text="残り時間   " + (int)Timer.timer +"秒";
 	}
 	
 	// Update is called once per frame

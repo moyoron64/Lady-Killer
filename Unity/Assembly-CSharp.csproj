@@ -59,9 +59,11 @@
      <Compile Include="Assets\Scripts\Destroy.cs" />
      <Compile Include="Assets\Scripts\Dish.cs" />
      <Compile Include="Assets\Scripts\Dish2.cs" />
+     <Compile Include="Assets\Scripts\Dish3.cs" />
      <Compile Include="Assets\Scripts\DrinkMove.cs" />
      <Compile Include="Assets\Scripts\DrinkMoveSe.cs" />
      <Compile Include="Assets\Scripts\FadeManager.cs" />
+     <Compile Include="Assets\Scripts\FadeOut.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
      <Compile Include="Assets\Scripts\Goal.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />
@@ -88,6 +90,7 @@
      <Compile Include="Assets\Scripts\gazouFade.cs" />
      <Compile Include="Assets\Scripts\haikeiMake.cs" />
      <Compile Include="Assets\Scripts\haikeiMove.cs" />
+     <Compile Include="Assets\Scripts\jumpCheck.cs" />
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
@@ -95,6 +98,7 @@
      <Compile Include="Assets\Scripts\resultKyori.cs" />
      <Compile Include="Assets\Scripts\resultNokori.cs" />
      <Compile Include="Assets\Scripts\resultTime.cs" />
+     <Compile Include="Assets\Scripts\xKotei.cs" />
      <Compile Include="Assets\Texture2.cs" />
      <None Include="Assets\LiquidPhysics\Shaders\Metaballs_Multiple.shader" />
   </ItemGroup>

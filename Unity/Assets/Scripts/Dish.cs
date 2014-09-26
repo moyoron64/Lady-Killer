@@ -23,8 +23,8 @@ public class Dish : MonoBehaviour {
 		
 		rigidbody2D.velocity =  direction * 16;
 		
-		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x) {
-			Invoke("resetPosition", 1);
+		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x + 7f) {
+			resetPosition();
 		}
 	}
 

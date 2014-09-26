@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour {
 	GameObject n17;
 	GameObject n18;
 	GameObject n19;
-	public static float timer = 99;
+	public static float timer = 0;
 	int number10;
 	int number;
 	
