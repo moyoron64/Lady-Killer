@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9de01a89f1a56644f95c64412b3ddd68
+guid: 5f38ef9ac08e22e4ab294af3672c5b4c
 TextureImporter:
   fileIDToRecycleName:
     21300000: glass-zanki
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
