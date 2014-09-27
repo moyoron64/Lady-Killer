@@ -10,6 +10,8 @@ public class layer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		particleSystem.renderer.sortingOrder = 2;
 	
 	}
 }

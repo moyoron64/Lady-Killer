@@ -51,6 +51,7 @@
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Alpha.cs" />
      <Compile Include="Assets\Scripts\Aspect.cs" />
+     <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\BgmControle.cs" />
      <Compile Include="Assets\Scripts\Black.cs" />
      <Compile Include="Assets\Scripts\CameraControll.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets\Scripts\haikeiMake.cs" />
      <Compile Include="Assets\Scripts\haikeiMove.cs" />
      <Compile Include="Assets\Scripts\jumpCheck.cs" />
+     <Compile Include="Assets\Scripts\lastScore.cs" />
      <Compile Include="Assets\Scripts\layer.cs" />
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
