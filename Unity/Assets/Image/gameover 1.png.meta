@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30a0aa2a2c016a54586a3160400d22b1
+guid: 2bfd43129e9d5d447874d02ce96f80cc
 TextureImporter:
   fileIDToRecycleName:
     21300000: gameover 1
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
