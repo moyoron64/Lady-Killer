@@ -59,7 +59,7 @@ public class Player : MonoBehaviour {
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
 		float zCheck;
-		if(Goal.clearFlag == true || failedFlag == true )return;
+		if((Goal.clearFlag == true) || (failedFlag == true) )return;
 
 		if (Timer.timer < 0.0f && isActive) {
 			Invoke("resetStage", 1);
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour {
 	{
 
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
-		if(Goal.clearFlag == true )return;
+		if((Goal.clearFlag == true) || (failedFlag == true) )return;
 		//float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下

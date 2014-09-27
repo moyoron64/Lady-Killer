@@ -21,7 +21,7 @@ public class Clear : MonoBehaviour {
 	void Update () {
 
 		if (Goal.clearFlag == true) {
-			anim.Play ("clear");
+			anim.Play ("trueClear");
 		}
 
 		if (time < 0) {

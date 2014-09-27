@@ -5,7 +5,7 @@ public class Resultjump : MonoBehaviour {
 
 
 	public float startTime = 4f;
-	public string goScene;
+	private string goScene;
 	// Use this for initialization
 	void Start () {
 
@@ -28,11 +28,48 @@ public class Resultjump : MonoBehaviour {
 		// ゲーム中ではなく、タッチ直後であればtrueを返す。
 		if (touch.phase == TouchPhase.Began) {
 			
-			Application.LoadLevel(goScene);
-			return;
+			result(Application.loadedLevelName);
 			
 		}
 
 
+	}
+
+	void result(string sceneName){
+		
+		switch(sceneName) {
+		case "Result1":
+			goScene = "Scene2";
+			break;
+		case "Result2":
+			goScene = "Scene3";
+			break;
+		case "Result3":
+			goScene = "Scene4";
+			break;
+		case "Result4":
+			goScene = "Scene5";
+			break;
+		case "Result5":
+			goScene = "Scene6";
+			break;
+		case "Result6":
+			goScene = "Scene7";
+			break;
+		case "Result7":
+			goScene = "Scene8";
+			break;
+		case "Result8":
+			goScene = "Scene9";
+			break;
+		default :
+			goScene = "Gameover";
+			break;
+		}
+		
+		
+		
+		
+		Application.LoadLevel(goScene);
 	}
 }

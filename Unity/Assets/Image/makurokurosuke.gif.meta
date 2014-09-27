@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac8969a403ff84c4faafb867ce7bc6bb
+guid: 63e64c3300c3cd445830dc60fe754f51
 TextureImporter:
   fileIDToRecycleName:
     21300000: makurokurosuke
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
