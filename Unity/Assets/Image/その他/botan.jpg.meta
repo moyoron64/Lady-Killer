@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc961d1dcca11e44e9db7e414f52045a
+guid: 944e64ae2aa424f76bbd14bb5763d07e
 TextureImporter:
   fileIDToRecycleName:
     21300000: botan
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

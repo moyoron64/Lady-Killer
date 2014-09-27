@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b754d7e004ed89141bdaf91a5852e155
+guid: 4defbbd6090644045bf50f11f9b9d505
 TextureImporter:
   fileIDToRecycleName:
     21300000: glass-liquid
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
