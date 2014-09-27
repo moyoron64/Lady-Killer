@@ -34,6 +34,7 @@ public class Player : MonoBehaviour {
 	public int slip = 0;
 	public float zCheck;
 	public static bool failedFlag;
+	public static float myXRole;
 	void Start(){
 		waterColor = new Color(0.5f, 1.0f, 1.0f, 1.0f);
 		startPosition = transform.localPosition;
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour {
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
 		float zCheck;
+
 		if((Goal.clearFlag == true) || (failedFlag == true) )return;
 
 		if (Timer.timer < 0.0f && isActive) {
@@ -105,7 +107,7 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-
+		myXRole = transform.eulerAngles.x;
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
 		if((Goal.clearFlag == true) || (failedFlag == true) )return;
 		//float x = Input.GetAxisRaw ("Horizontal");
@@ -146,6 +148,14 @@ public class Player : MonoBehaviour {
 
 	}
 
+
+
+	void noRole(){
+
+		if (Attack.attackBool == true) {
+			transform.eulerAngles = new Vector3 (Attack.xRole, transform.eulerAngles.y, transform.eulerAngles.y);
+		}
+	}
 
 	void Jump()
 	{
