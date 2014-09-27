@@ -5,6 +5,7 @@ public class Goal : MonoBehaviour {
 	// プロパティ
 	float xSize; // x方向のサイズ
 	float xPosition;
+	float radius; //ゴールの半径
 	static public float distance = 9.99f; // グラスとの距離
 	public static bool clearFlag;
 
@@ -13,7 +14,7 @@ public class Goal : MonoBehaviour {
 	--------------------------------------------*/
 	// Use this for initialization
 	void Start () {
-		xSize = transform.lossyScale.x;
+		xSize = renderer.bounds.size.x;
 		xPosition = transform.localPosition.x;
 		distance = 10;
 		clearFlag = false;
@@ -34,9 +35,15 @@ public class Goal : MonoBehaviour {
 		if (clearFlag == false) {
 			distance = System.Math.Abs(glassPosition - goalPosition);
 
+			//Debug.Log("distance =" + distance + '/' + transform.localPosition.x + xSize/2 + '/' + Player2.transform.localPosition.x);
+			if (glassPosition < transform.localPosition.x) {
+					return true;
+			}
+			/*
 			if (distance < xSize / 2) {
 					return true;
 			}
+			*/
 		}
 		return false;
 	}
