@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\jumpCheck.cs" />
      <Compile Include="Assets\Scripts\lastScore.cs" />
      <Compile Include="Assets\Scripts\layer.cs" />
+     <Compile Include="Assets\Scripts\middleFade.cs" />
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
