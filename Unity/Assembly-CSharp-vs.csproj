@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\haikeiMake.cs" />
      <Compile Include="Assets\Scripts\haikeiMove.cs" />
      <Compile Include="Assets\Scripts\jumpCheck.cs" />
+     <Compile Include="Assets\Scripts\layer.cs" />
      <Compile Include="Assets\Scripts\miniMap.cs" />
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
