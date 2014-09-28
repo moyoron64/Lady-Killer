@@ -52,12 +52,13 @@ public class popWindow2 : MonoBehaviour {
 				stopOk = true;
 				
 			}
-			if(hit.name == "go"){
+			if(hit.name == "go"&&stopOk == true){
 
 				Time.timeScale = 1;
 				pop1.guiTexture.enabled = false;
 				pop2.guiTexture.enabled = false;
 				pop3.guiTexture.enabled = false;
+				stopOk = false;
 
 			}
 			if(hit.name == "ready" && stopOk == true){

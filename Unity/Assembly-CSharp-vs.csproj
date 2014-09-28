@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\resultNokori.cs" />
      <Compile Include="Assets\Scripts\resultTime.cs" />
      <Compile Include="Assets\Scripts\rogojump.cs" />
+     <Compile Include="Assets\Scripts\saigoScore.cs" />
      <Compile Include="Assets\Scripts\sceneJump.cs" />
      <Compile Include="Assets\Scripts\xKotei.cs" />
      <Compile Include="Assets\Texture2.cs" />

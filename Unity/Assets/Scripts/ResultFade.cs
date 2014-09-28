@@ -30,7 +30,14 @@ public class ResultFade : MonoBehaviour {
 		CS.renderer.enabled = false;
 	
 
+		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
 
+
+		int sumscore =PlayerPrefs.GetInt("sumScore");
+
+		sumscore = score + sumscore;
+
+		PlayerPrefs.SetInt("sumScore", sumscore);
 
 
 
@@ -39,6 +46,8 @@ public class ResultFade : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+
+
 
 
 		if(score>9000000)CS.renderer.enabled = true;
@@ -52,7 +61,6 @@ public class ResultFade : MonoBehaviour {
 		if(score >=5000000 &&  score <=7000000)AB.renderer.enabled = true;
 		if(score < 5000000)AC.renderer.enabled = true;
 
-		Debug.Log (score);
 
 
 
