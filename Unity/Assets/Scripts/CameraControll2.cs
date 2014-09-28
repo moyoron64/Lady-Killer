@@ -34,7 +34,7 @@ public class CameraControll2 : MonoBehaviour {
 
 
 
-			this.transform.position = new Vector3(this.kakuteru.transform.position.x, this.kakuteru.transform.position.y, this.kakuteru.transform.position.z + this.offset.z);
+			this.transform.position = new Vector3(this.kakuteru.transform.position.x-3, this.kakuteru.transform.position.y+4, this.kakuteru.transform.position.z + this.offset.z);
 			
 		/*
 			if ((this.transform.position.x - this.kakuteru.transform.position.x) >= -3  ) {

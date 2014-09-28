@@ -31,7 +31,7 @@ public class CameraControll : MonoBehaviour {
 
 		if(this.transform.position.x < this.goalPosition.transform.position.x )return;
 
-		if (Player.jump == false) {	
+		if ( Player.jump == false || this.transform.position.y > this.kakuteru.transform.position.y +3 ) {	
 
 			if(this.transform.position.y >= firstYKakuteru - 0.15f )this.transform.position = new Vector3(this.transform.position.x, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);
 	
@@ -45,7 +45,7 @@ public class CameraControll : MonoBehaviour {
 			}
 		}
 
-		if (Player.jump == true) {
+		if (Player.jump == true && this.transform.position.y < this.kakuteru.transform.position.y +3 ) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.kakuteru.transform.position.z + this.offset.z);
 			
 
