@@ -6,6 +6,7 @@ public class popWindow : MonoBehaviour {
 
 	GameObject pop1,pop2,pop3,pop4,pop5;
 	public int game = 1;
+	public bool stopOk = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class popWindow : MonoBehaviour {
 		pop3.renderer.enabled = false;
 		pop4.renderer.enabled = false;
 		pop5.renderer.enabled = false;
+		stopOk = false;
 	
 	}
 	
@@ -46,6 +48,7 @@ public class popWindow : MonoBehaviour {
 					pop4.renderer.enabled = true;
 					pop5.renderer.enabled = true;
 					return;
+					stopOk = true;
 				}
 
 				if(hitObject.collider.gameObject.name =="ready"){
@@ -57,7 +60,7 @@ public class popWindow : MonoBehaviour {
 					pop5.renderer.enabled = false;
 					game=1;
 				}
-				if(hitObject.collider.gameObject.name =="go"){
+				if(hitObject.collider.gameObject.name =="go"&& stopOk == true){
 					Time.timeScale = 1;
 					Application.LoadLevel("Title");
 

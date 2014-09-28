@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TotalScore : MonoBehaviour {
+public class saigoScore : MonoBehaviour {
 	
 	private int score1,score2,score3,score4,score5,score6,score0,score7;
 	GameObject po01,po02,po03,po04,
@@ -326,13 +326,25 @@ public class TotalScore : MonoBehaviour {
 		po88.renderer.enabled = false;
 		po89.renderer.enabled = false;
 		po80.renderer.enabled = false;
+
+
+		score = PlayerPrefs.GetInt("sumScore");
+		int highscore = PlayerPrefs.GetInt("highScore");
+		if(score > highscore )highscore = score ;
+
+		PlayerPrefs.SetInt("highScore", highscore);
+
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+
+
+
+		score = PlayerPrefs.GetInt("sumScore");
+
+
 		
 		
 		
