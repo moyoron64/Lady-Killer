@@ -40,14 +40,14 @@ public class Goal : MonoBehaviour {
 			distance = System.Math.Abs(glassPosition - goalPosition);
 
 			//Debug.Log("distance =" + distance + '/' + transform.localPosition.x + xSize/2 + '/' + Player2.transform.localPosition.x);
-			if (glass.transform.localPosition.x < transform.localPosition.x) {
+			/*if (glass.transform.localPosition.x < transform.localPosition.x) {
 					return true;
-			}
-			/*
+			}*/
+
 			if (distance < xSize / 2) {
 					return true;
 			}
-			*/
+
 		}
 		return false;
 	}
