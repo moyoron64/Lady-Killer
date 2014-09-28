@@ -54,7 +54,7 @@ public class Resultjump : MonoBehaviour {
 			goScene = "Scene6";
 			break;
 		case "Result6":
-			goScene = "SEprolouge3";
+			goScene = "Eprolouge3";
 			break;
 		case "Result7":
 			goScene = "Scene8";
