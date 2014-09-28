@@ -119,18 +119,18 @@ public class DynamicParticle : MonoBehaviour {
 				break;
 			case "Scene3":
 			case "Scene4":
-				_waterColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+				_waterColor = new Color(0.2f, 0.2f, 0.8f, 1.0f);
 				break;
 			case "Scene5":
 			case "Scene6":
-				_waterColor = new Color(0.0f, 0.0f, 1.0f, 1.0f);
+				_waterColor = new Color(0.8f, 0.8f, 0.0f, 1.0f);
 				break;
 			case "Scene7":
 			case "Scene8":
 				_waterColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
 				break;
 			default :
-				_waterColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+				_waterColor = new Color(1.0f, 0.0f, 1.0f, 1.0f);
 				break;
 		}
 		return _waterColor;

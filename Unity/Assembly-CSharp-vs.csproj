@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\BgmControle.cs" />
      <Compile Include="Assets\Scripts\Black.cs" />
      <Compile Include="Assets\Scripts\CameraControll.cs" />
+     <Compile Include="Assets\Scripts\CameraControll2.cs" />
      <Compile Include="Assets\Scripts\Clear.cs" />
      <Compile Include="Assets\Scripts\Density.cs" />
      <Compile Include="Assets\Scripts\Destroy.cs" />
@@ -109,6 +110,7 @@
      <Compile Include="Assets\Scripts\rogojump.cs" />
      <Compile Include="Assets\Scripts\saigoScore.cs" />
      <Compile Include="Assets\Scripts\sceneJump.cs" />
+     <Compile Include="Assets\Scripts\traceCheck.cs" />
      <Compile Include="Assets\Scripts\tyuto.cs" />
      <Compile Include="Assets\Scripts\xKotei.cs" />
      <Compile Include="Assets\Texture2.cs" />
