@@ -3,7 +3,7 @@ using System.Collections;
 
 public class traceCheck : MonoBehaviour {
 
-	public float speed = 5f;
+	public float speed = 0.1f;
 
 	// Use this for initialization
 	void Start () {
