@@ -70,6 +70,11 @@ public class Player2 : MonoBehaviour {
 	void FixedUpdate()
 	{
 
+		if (Goal.clearFlag == true) {
+			return;
+		}
+
+
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
 
 		float x = Input.GetAxisRaw ("Horizontal");

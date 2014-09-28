@@ -18,7 +18,6 @@ public class Water : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(Player.waterLife);
 		// 水が地面にこぼれたときの処理
 		if (!judgeWaterStatus() && isActive) {
 			isActive = false;
@@ -50,7 +49,6 @@ public class Water : MonoBehaviour {
 		//Debug.Log("gPosition" + gPosition.x + gWidth/2);
 		// x座標の判定
 		if (((gPosition.x - wPosition. x) < -5 || 5 < (gPosition.x - wPosition.x))   && isActive) {
-			Debug.Log("lost");
 			return false;
 		}
 		return true;

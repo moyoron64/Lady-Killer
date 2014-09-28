@@ -8,12 +8,14 @@ public class Goal : MonoBehaviour {
 	float radius; //ゴールの半径
 	static public float distance = 9.99f; // グラスとの距離
 	public static bool clearFlag;
+	GameObject glass;
 
 	/*--------------------------------------------
 	  初期化
 	--------------------------------------------*/
 	// Use this for initialization
 	void Start () {
+		glass = GameObject.FindGameObjectWithTag("kakuteru");
 		xSize = renderer.bounds.size.x;
 		xPosition = transform.localPosition.x;
 		distance = 10;
@@ -22,6 +24,8 @@ public class Goal : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Debug.Log(glass.transform.localPosition.x);
+		Debug.Log(transform.localPosition.x);
 		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.xSokudo >= 0  && Player.isGrounded == true && Player.waterLife != 0 ) {
 			// ゴールの半径内かつ速度が１以下ならシーン移動
 			//Application.LoadLevel ("Result2");
@@ -36,7 +40,7 @@ public class Goal : MonoBehaviour {
 			distance = System.Math.Abs(glassPosition - goalPosition);
 
 			//Debug.Log("distance =" + distance + '/' + transform.localPosition.x + xSize/2 + '/' + Player2.transform.localPosition.x);
-			if (glassPosition < transform.localPosition.x) {
+			if (glass.transform.localPosition.x < transform.localPosition.x) {
 					return true;
 			}
 			/*

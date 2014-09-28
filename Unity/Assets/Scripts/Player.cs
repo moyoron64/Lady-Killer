@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
 		float g = Input.acceleration.magnitude;
 
 
-		Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
+		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
 		if ( g > 1.425f && jump == false &&  isGrounded==true) {
 			jump = true;
@@ -263,7 +263,7 @@ public class Player : MonoBehaviour {
 		transform.eulerAngles = new Vector3(0, 0, 0);
 		*/
 
-		
+
 
 
 	}

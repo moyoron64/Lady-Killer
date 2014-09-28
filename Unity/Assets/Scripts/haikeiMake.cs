@@ -12,15 +12,15 @@ public class haikeiMake : MonoBehaviour {
 		bPlayer = Player.xPosition+0.1f;
 		sabun = 0;
 
-		suraid = 0; 
+		suraid = 0;
 		kakuteru = GameObject.Find("glass-kara");
 		pCamera = GameObject.Find("cameraPosition");
 		ok = GameObject.Find("ok");
 		this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 20f, this.transform.position.y, this.transform.position.z);
-	
-		
+
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -45,7 +45,7 @@ public class haikeiMake : MonoBehaviour {
 		}
 
 
-		Debug.Log ("sabun="+ sabun);
+		//Debug.Log ("sabun="+ sabun);
 
 	}
 }
