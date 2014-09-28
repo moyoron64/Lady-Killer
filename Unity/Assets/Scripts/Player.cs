@@ -13,8 +13,9 @@ public class Player : MonoBehaviour {
 	static public Color waterColor;         // 中身の色
 	static public bool isActive = true;
 	static public float xPosition;
+	static public bool isNextStage = false;
 	static public Vector2 velocity;
-	        public float speed = 5;
+	public float speed = 5;
 
 
 	public Vector3 startPosition; // ゲーム開始時の初期位置
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour {
 	void Update()
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
+		Debug.Log(life);
 		float zCheck;
 
 		if((Goal.clearFlag == true) || (failedFlag == true) )return;
@@ -256,7 +258,7 @@ public class Player : MonoBehaviour {
 	{
 
 
-
+		life --;
 		failedFlag = true;
 		/*
 		transform.localPosition = startPosition;

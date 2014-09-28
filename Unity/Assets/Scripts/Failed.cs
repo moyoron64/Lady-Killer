@@ -10,9 +10,9 @@ public class Failed : MonoBehaviour {
 	void Start () {
 
 		anim = GetComponent<Animation>();
-
+		time = 2.0f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -23,19 +23,17 @@ public class Failed : MonoBehaviour {
 		if (time < 0) {
 			result();
 		}
-		
-	
+
+
 	}
 	void result(){
+		Time.timeScale = 0;
 
-
-		Player.life --;
-		
 		if (Player.life == -1 ) {
 			Application.LoadLevel("Gameover");
 			return;
 		}
-		
+
 		Application.LoadLevel (Application.loadedLevelName);
 	}
 
