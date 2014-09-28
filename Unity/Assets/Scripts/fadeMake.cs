@@ -14,11 +14,11 @@ public class fadeMake : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ( startTime >= 0f ) {
+		if ( startTime >= -2f ) {
 			startTime -= Time.deltaTime;
 			return;
 		}
-		FadeManager.Instance.LoadLevel(goScene,2f);
+		Application.LoadLevel(goScene);
 	
 	}
 }

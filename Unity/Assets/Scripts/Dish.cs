@@ -13,6 +13,8 @@ public class Dish : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+
 		if (isReuse) {
 
 			//Vector2 direction = new Vector2 (10, 0).normalized;
@@ -45,6 +47,7 @@ public class Dish : MonoBehaviour {
 
 	public void resetPosition()
 	{
+			if(startPosition.x > GameObject.Find("glass-kara").transform.localPosition.x - 30f)return;
 			transform.localPosition = startPosition;
 			isReuse = true;
 	}
