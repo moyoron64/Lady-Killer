@@ -1,15 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Resultjump.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BgmControle.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="72" Column="28" />
+      <File FileName="Assets\Scripts\Player.cs" Line="61" Column="4" />
       <File FileName="Assets\Scripts\haikeiMake.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Goal.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Water.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Clear.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Dish.cs" Line="50" Column="85" />
+      <File FileName="Assets\Scripts\Dish.cs" Line="26" Column="41" />
       <File FileName="Assets\Scripts\fadeMake.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Resultjump.cs" Line="76" Column="1" />
+      <File FileName="Assets\Scripts\Resultjump.cs" Line="53" Column="18" />
+      <File FileName="Assets\Scripts\tyuto.cs" Line="69" Column="31" />
+      <File FileName="Assets\Scripts\Rank.cs" Line="48" Column="18" />
+      <File FileName="Assets\Scripts\Title.cs" Line="46" Column="4" />
+      <File FileName="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" Line="140" Column="1" />
+      <File FileName="Assets\Scripts\ZankiCheck.cs" Line="24" Column="36" />
+      <File FileName="Assets\Scripts\BgmControle.cs" Line="46" Column="121" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

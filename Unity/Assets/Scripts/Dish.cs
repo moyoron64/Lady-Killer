@@ -23,7 +23,7 @@ public class Dish : MonoBehaviour {
 		}
 		Vector2 direction = new Vector2 (10, 0).normalized;
 		
-		rigidbody2D.velocity =  direction * 16;
+		rigidbody2D.velocity =  direction * 13;
 		
 		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x + 10f) {
 			resetPosition();
@@ -47,7 +47,7 @@ public class Dish : MonoBehaviour {
 
 	public void resetPosition()
 	{
-			if(startPosition.x > GameObject.Find("glass-kara").transform.localPosition.x - 30f)return;
+			if(startPosition.x > GameObject.Find("glass-kara").transform.localPosition.x - 40f)return;
 			transform.localPosition = startPosition;
 			isReuse = true;
 	}
