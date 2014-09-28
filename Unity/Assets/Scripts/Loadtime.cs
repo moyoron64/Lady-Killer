@@ -24,7 +24,7 @@ public class Loadtime : MonoBehaviour {
 		if ( currentRemainTime <= 0f ) {
 			// 残り時間が無くなったら自分自身を消滅
 
-			Application.LoadLevel("Scene1");
+			Application.LoadLevel("Prologue1");
 			return;
 		}
 

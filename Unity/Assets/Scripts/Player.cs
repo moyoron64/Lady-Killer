@@ -110,16 +110,18 @@ public class Player : MonoBehaviour {
 		myXRole = transform.eulerAngles.x;
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
 		if((Goal.clearFlag == true) || (failedFlag == true) )return;
-		//float x = Input.GetAxisRaw ("Horizontal");
+		/*float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下
-                //float y = Input.GetAxisRaw ("Vertical");
+                float y = Input.GetAxisRaw ("Vertical");
 
                 // 移動する向きを求める
-                //Vector2 direction = new Vector2 (x, y).normalized;
+                Vector2 direction = new Vector2 (x, y).normalized;
 
                 // 移動する向きとスピードを代入する
-                //rigidbody2D.velocity = direction * speed;
+                rigidbody2D.velocity = direction * speed;
+
+		*/
 
 
 
@@ -133,7 +135,7 @@ public class Player : MonoBehaviour {
 		Move();
 		Jump();
 		//Fall();
-		if(slip==1)Slip();
+		//if(slip==1)Slip();
 
 
 
@@ -152,7 +154,7 @@ public class Player : MonoBehaviour {
 
 	void noRole(){
 
-		if (Attack.attackBool == true) {
+		if (Attack.attackBool == true && isGrounded == false) {
 			transform.eulerAngles = new Vector3 (Attack.xRole, transform.eulerAngles.y, transform.eulerAngles.y);
 		}
 	}
@@ -186,20 +188,23 @@ public class Player : MonoBehaviour {
 
 	}*/
 
-	/*void OnCollisionEnter2D(Collision2D col)
+	void OnCollisionEnter2D(Collision2D col)
 	{
 
 
 		if (col.gameObject.tag == "yuka" && ySokudo <= 0   ) {
 			isGrounded = true;
-			jump = false;
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
 		}
 
-		if (col.gameObject.tag == "slip") {
-			rigidbody2D.AddForce (Vector2.right *  rigidbody2D.velocity.x * 600f);
+		if (col.gameObject.tag == "slip"    ) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
+
 		}
-	}*/
+
+
+
+	}
 
 
 	/*void OnCollisionExit2D(Collision2D col)
@@ -222,22 +227,22 @@ public class Player : MonoBehaviour {
 
 	void Slip(){
 		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0 && Player.isGrounded == true) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
 			slip1Count++;
 		}
 
 		if (System.Math.Abs (slip2.transform.position.x - this.transform.position.x) < 2 && slip2Count ==0 && Player.isGrounded == true) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
 			slip2Count++;
 		}
 
 		if (System.Math.Abs (slip3.transform.position.x - this.transform.position.x) < 2 && slip3Count ==0 && Player.isGrounded == true) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
 			slip3Count++;
 		}
 
 		if (System.Math.Abs (slip4.transform.position.x - this.transform.position.x) < 2.5 && slip4Count ==0 && Player.isGrounded == true) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 70f);
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
 			slip4Count++;
 		}
 

@@ -24,7 +24,7 @@ public class jumpCheck : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.CompareTag("yuka")){ //ジャンプで当たった
 
-			time = 0.08f;
+			time = 0.05f;
 			timeBool = true;
 
 		}

@@ -6,10 +6,11 @@ public class popWindow2 : MonoBehaviour {
 	GUITexture pop1;
 	GUITexture pop2;
 	GUITexture pop3;
+	public bool stopOk = false;
 	// Use this for initialization
 	void Start () {
 
-
+		stopOk = false;
 
 
 		guiLayer = Camera.main.GetComponent<GUILayer>();
@@ -48,6 +49,7 @@ public class popWindow2 : MonoBehaviour {
 				pop2.guiTexture.enabled = true;
 				pop3.guiTexture.enabled = true;
 				Time.timeScale = 0;
+				stopOk = true;
 				
 			}
 			if(hit.name == "go"){
@@ -58,7 +60,7 @@ public class popWindow2 : MonoBehaviour {
 				pop3.guiTexture.enabled = false;
 
 			}
-			if(hit.name == "ready"){
+			if(hit.name == "ready" && stopOk == true){
 				Time.timeScale = 1;
 				Application.LoadLevel("Title");
 			}

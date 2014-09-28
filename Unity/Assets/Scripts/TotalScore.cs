@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class TotalScore : MonoBehaviour {
-	private int score1,score2,score3,score4,score5,score6,score0;
+	
+	private int score1,score2,score3,score4,score5,score6,score0,score7;
 	GameObject po01,po02,po03,po04,
 	po05,
 	po06,
@@ -92,12 +93,23 @@ public class TotalScore : MonoBehaviour {
 	po77,
 	po78,
 	po79,
-	po70;
-
-	public static int score; 
-
+	po70,
+	
+	po81,
+	po82,
+	po83,
+	po84,
+	po85,
+	po86,
+	po87,
+	po88,
+	po89,
+	po80;
+	int score;
+	
 	// Use this for initialization
 	void Start () {
+		score = 0;
 		/*kihonkei
 		po71 = GameObject.Find("koko1");
 		po72 = GameObject.Find("koko2");
@@ -120,7 +132,7 @@ public class TotalScore : MonoBehaviour {
 		po79.renderer.enabled = false;
 		po70.renderer.enabled = false;
 		*/
-
+		
 		po01 = GameObject.Find("01");
 		po02 = GameObject.Find("02");
 		po03 = GameObject.Find("03");
@@ -141,8 +153,8 @@ public class TotalScore : MonoBehaviour {
 		po08.renderer.enabled = false;
 		po09.renderer.enabled = false;
 		po00.renderer.enabled = false;
-
-
+		
+		
 		po11 = GameObject.Find("11");
 		po12 = GameObject.Find("12");
 		po13 = GameObject.Find("13");
@@ -163,7 +175,7 @@ public class TotalScore : MonoBehaviour {
 		po18.renderer.enabled = false;
 		po19.renderer.enabled = false;
 		po10.renderer.enabled = false;
-
+		
 		po21 = GameObject.Find("21");
 		po22 = GameObject.Find("22");
 		po23 = GameObject.Find("23");
@@ -184,8 +196,8 @@ public class TotalScore : MonoBehaviour {
 		po28.renderer.enabled = false;
 		po29.renderer.enabled = false;
 		po20.renderer.enabled = false;
-
-
+		
+		
 		po31 = GameObject.Find("31");
 		po32 = GameObject.Find("32");
 		po33 = GameObject.Find("33");
@@ -206,8 +218,8 @@ public class TotalScore : MonoBehaviour {
 		po38.renderer.enabled = false;
 		po39.renderer.enabled = false;
 		po30.renderer.enabled = false;
-
-
+		
+		
 		po41 = GameObject.Find("41");
 		po42 = GameObject.Find("42");
 		po43 = GameObject.Find("43");
@@ -228,8 +240,8 @@ public class TotalScore : MonoBehaviour {
 		po48.renderer.enabled = false;
 		po49.renderer.enabled = false;
 		po40.renderer.enabled = false;
-
-
+		
+		
 		po51 = GameObject.Find("51");
 		po52 = GameObject.Find("52");
 		po53 = GameObject.Find("53");
@@ -250,8 +262,8 @@ public class TotalScore : MonoBehaviour {
 		po58.renderer.enabled = false;
 		po59.renderer.enabled = false;
 		po50.renderer.enabled = false;
-
-
+		
+		
 		po61 = GameObject.Find("61");
 		po62 = GameObject.Find("62");
 		po63 = GameObject.Find("63");
@@ -272,7 +284,7 @@ public class TotalScore : MonoBehaviour {
 		po68.renderer.enabled = false;
 		po69.renderer.enabled = false;
 		po60.renderer.enabled = false;
-
+		
 		po71 = GameObject.Find("71");
 		po72 = GameObject.Find("72");
 		po73 = GameObject.Find("73");
@@ -293,33 +305,47 @@ public class TotalScore : MonoBehaviour {
 		po78.renderer.enabled = false;
 		po79.renderer.enabled = false;
 		po70.renderer.enabled = false;
-
-		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
-		int sumScore =PlayerPrefs.GetInt("sumScore");
-		sumScore += score; 
-		PlayerPrefs.SetInt("sumScore", sumScore);
+		
+		po81 = GameObject.Find("81");
+		po82 = GameObject.Find("82");
+		po83 = GameObject.Find("83");
+		po84 = GameObject.Find("84");
+		po85 = GameObject.Find("85");
+		po86 = GameObject.Find("86");
+		po87 = GameObject.Find("87");
+		po88 = GameObject.Find("88");
+		po89 = GameObject.Find("89");
+		po80 = GameObject.Find("80");
+		po81.renderer.enabled = false;
+		po82.renderer.enabled = false;
+		po83.renderer.enabled = false;
+		po84.renderer.enabled = false;
+		po85.renderer.enabled = false;
+		po86.renderer.enabled = false;
+		po87.renderer.enabled = false;
+		po88.renderer.enabled = false;
+		po89.renderer.enabled = false;
+		po80.renderer.enabled = false;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
-		PlayerPrefs.SetInt("Score", score);
-		//Debug.Log ("time"+(3333333*Timer.timer/60));
-		//Debug.Log ("life"+(3333333 * (float)Player.waterLife/22));
-		//Debug.Log ("kyori"+(3333333 * (10-System.Math.Abs(Goal.distance)) / 10));
-
-
+		
+		score =PlayerPrefs.GetInt("Score");
+		
+		
 		score0 = score % 10;
 		score1 = score % 100 /10;
 		score2 = score % 1000/100;
 		score3 = score % 10000/1000;
 		score4 = score % 100000/10000;
 		score5 = score % 1000000/100000;
-		score6 = score / 1000000;
-
-		PlayerPrefs.SetInt("Result", score);
-
+		score6 = score % 10000000/1000000;
+		score7 = score / 100000000;
+		
+		
+		
 		if(score0==0)po00.renderer.enabled= true;
 		if(score0==1)po01.renderer.enabled= true;
 		if(score0==2)po02.renderer.enabled= true;
@@ -330,7 +356,7 @@ public class TotalScore : MonoBehaviour {
 		if(score0==7)po07.renderer.enabled= true;
 		if(score0==8)po08.renderer.enabled= true;
 		if(score0==9)po09.renderer.enabled= true;
-
+		
 		if(score1==0)po10.renderer.enabled= true;
 		if(score1==1)po11.renderer.enabled= true;
 		if(score1==2)po12.renderer.enabled= true;
@@ -341,7 +367,7 @@ public class TotalScore : MonoBehaviour {
 		if(score1==7)po17.renderer.enabled= true;
 		if(score1==8)po18.renderer.enabled= true;
 		if(score1==9)po19.renderer.enabled= true;
-
+		
 		if(score2==0)po20.renderer.enabled= true;
 		if(score2==1)po21.renderer.enabled= true;
 		if(score2==2)po22.renderer.enabled= true;
@@ -352,7 +378,7 @@ public class TotalScore : MonoBehaviour {
 		if(score2==7)po27.renderer.enabled= true;
 		if(score2==8)po28.renderer.enabled= true;
 		if(score2==9)po29.renderer.enabled= true;
-
+		
 		if(score3==0)po30.renderer.enabled= true;
 		if(score3==1)po31.renderer.enabled= true;
 		if(score3==2)po32.renderer.enabled= true;
@@ -363,7 +389,7 @@ public class TotalScore : MonoBehaviour {
 		if(score3==7)po37.renderer.enabled= true;
 		if(score3==8)po38.renderer.enabled= true;
 		if(score3==9)po39.renderer.enabled= true;
-
+		
 		if(score4==0)po40.renderer.enabled= true;
 		if(score4==1)po41.renderer.enabled= true;
 		if(score4==2)po42.renderer.enabled= true;
@@ -374,7 +400,7 @@ public class TotalScore : MonoBehaviour {
 		if(score4==7)po47.renderer.enabled= true;
 		if(score4==8)po48.renderer.enabled= true;
 		if(score4==9)po49.renderer.enabled= true;
-
+		
 		if(score5==0)po50.renderer.enabled= true;
 		if(score5==1)po51.renderer.enabled= true;
 		if(score5==2)po52.renderer.enabled= true;
@@ -385,7 +411,7 @@ public class TotalScore : MonoBehaviour {
 		if(score5==7)po57.renderer.enabled= true;
 		if(score5==8)po58.renderer.enabled= true;
 		if(score5==9)po59.renderer.enabled= true;
-
+		
 		if(score6==0)po60.renderer.enabled= true;
 		if(score6==1)po61.renderer.enabled= true;
 		if(score6==2)po62.renderer.enabled= true;
@@ -396,9 +422,19 @@ public class TotalScore : MonoBehaviour {
 		if(score6==7)po67.renderer.enabled= true;
 		if(score6==8)po68.renderer.enabled= true;
 		if(score6==9)po69.renderer.enabled= true;
-
-
 		
-
+		if(score7==0)po70.renderer.enabled= true;
+		if(score7==1)po71.renderer.enabled= true;
+		if(score7==2)po72.renderer.enabled= true;
+		if(score7==3)po73.renderer.enabled= true;
+		if(score7==4)po74.renderer.enabled= true;
+		if(score7==5)po75.renderer.enabled= true;
+		if(score7==6)po76.renderer.enabled= true;
+		if(score7==7)po77.renderer.enabled= true;
+		if(score7==8)po78.renderer.enabled= true;
+		if(score7==9)po79.renderer.enabled= true;
+		
+		
+		
 	}
 }

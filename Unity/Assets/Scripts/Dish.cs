@@ -23,9 +23,24 @@ public class Dish : MonoBehaviour {
 		
 		rigidbody2D.velocity =  direction * 16;
 		
-		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x + 7f) {
+		if (transform.localPosition.x > GameObject.Find("glass-kara").transform.localPosition.x + 10f) {
 			resetPosition();
 		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		
+		
+
+		
+		if (col.gameObject.tag == "slip"    ) {
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
+			
+		}
+		
+		
+		
 	}
 
 	public void resetPosition()

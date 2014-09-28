@@ -42,25 +42,25 @@ public class Resultjump : MonoBehaviour {
 			goScene = "Scene2";
 			break;
 		case "Result2":
-			goScene = "Scene3";
+			goScene = "Eprolouge1";
 			break;
 		case "Result3":
 			goScene = "Scene4";
 			break;
 		case "Result4":
-			goScene = "Scene5";
+			goScene = "Eprolouge2";
 			break;
 		case "Result5":
 			goScene = "Scene6";
 			break;
 		case "Result6":
-			goScene = "Scene7";
+			goScene = "SEprolouge3";
 			break;
 		case "Result7":
 			goScene = "Scene8";
 			break;
 		case "Result8":
-			goScene = "Scene9";
+			goScene = "Eprolouge14";
 			break;
 		default :
 			goScene = "Gameover";

@@ -28,6 +28,7 @@ public class Attack : MonoBehaviour {
 			time = 1f;
 			attackBool = true;
 			xRole = Player.myXRole;
+			Debug.Log("aaaaaaaaa");
 			
 		}
 	}
