@@ -4,10 +4,14 @@ using System.Collections;
 public class prolougeJump : MonoBehaviour {
 	
 	
-	public float startTime = 21f;
+	public float startTime;
+	public float goTime;
 	private string goScene;
+	Touch touch;
 	// Use this for initialization
 	void Start () {
+
+		goTime = startTime;
 		
 		
 		
@@ -16,9 +20,10 @@ public class prolougeJump : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Touch touch = Input.GetTouch (0);
+		touch = Input.GetTouch (0);
 		
 		// ゲーム中ではなく、タッチ直後であればtrueを返す。
+
 		if (touch.phase == TouchPhase.Began) {
 			
 			result(Application.loadedLevelName);
@@ -26,11 +31,12 @@ public class prolougeJump : MonoBehaviour {
 		}
 
 
-		if ( startTime >= 0f ) {
-			startTime -= Time.deltaTime;
+		if ( goTime >= 0f ) {
+			goTime -= Time.deltaTime;
 			return;
 		}
-		
+
+
 		result(Application.loadedLevelName);
 
 
@@ -43,7 +49,7 @@ public class prolougeJump : MonoBehaviour {
 		
 		switch(sceneName) {
 		case "Prologue1":
-			goScene = "Scene1";
+			goScene = "Tutlial";
 			break;
 		case "Prologue2":
 			goScene = "Scene3";

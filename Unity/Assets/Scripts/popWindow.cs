@@ -40,18 +40,32 @@ public class popWindow : MonoBehaviour {
 			
 			if(colition2d) {
 				RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
-				if(hitObject.collider.gameObject.name =="STOP"){
+				if(hitObject.collider.gameObject.name =="STOP"  && stopOk ==false){
 					Time.timeScale = 0;
 					pop1.renderer.enabled = true;
 					pop2.renderer.enabled = true;
 					pop3.renderer.enabled = true;
 					pop4.renderer.enabled = true;
 					pop5.renderer.enabled = true;
-					return;
 					stopOk = true;
+					return;
+
 				}
 
-				if(hitObject.collider.gameObject.name =="ready"){
+				else if(hitObject.collider.gameObject.name =="STOP" && stopOk == true ){
+					
+					
+					pop1.renderer.enabled = false;
+					pop2.renderer.enabled = false;
+					pop3.renderer.enabled = false;
+					pop4.renderer.enabled = false;
+					pop5.renderer.enabled = false;
+					Time.timeScale = 1;
+					stopOk = false;
+					
+				}
+
+				else if(hitObject.collider.gameObject.name =="ready" && stopOk == true){
 					Time.timeScale = 1;
 					pop1.renderer.enabled = false;
 					pop2.renderer.enabled = false;
@@ -60,7 +74,7 @@ public class popWindow : MonoBehaviour {
 					pop5.renderer.enabled = false;
 					game=1;
 				}
-				if(hitObject.collider.gameObject.name =="go"&& stopOk == true){
+				else  if(hitObject.collider.gameObject.name == "go" && stopOk == true){
 					Time.timeScale = 1;
 					Application.LoadLevel("Title");
 
