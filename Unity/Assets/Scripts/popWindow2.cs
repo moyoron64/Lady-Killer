@@ -42,7 +42,7 @@ public class popWindow2 : MonoBehaviour {
 		GUIElement hit = guiLayer.HitTest (touch.position);
 
 		if (Input.GetMouseButtonDown (0) && hit != null) {
-			if(hit.name == "STOP"){
+			if(hit.name == "STOP" && stopOk == false ){
 
 
 				pop1.guiTexture.enabled = true;
@@ -52,7 +52,18 @@ public class popWindow2 : MonoBehaviour {
 				stopOk = true;
 				
 			}
-			if(hit.name == "go"&&stopOk == true){
+			if(hit.name == "STOP" && stopOk == true ){
+				
+				
+				pop1.guiTexture.enabled = false;
+				pop2.guiTexture.enabled = false;
+				pop3.guiTexture.enabled = false;
+				Time.timeScale = 1;
+				stopOk = false;
+				
+			}
+
+			if(hit.name == "ready"&&stopOk == true){
 
 				Time.timeScale = 1;
 				pop1.guiTexture.enabled = false;
@@ -61,7 +72,7 @@ public class popWindow2 : MonoBehaviour {
 				stopOk = false;
 
 			}
-			if(hit.name == "ready" && stopOk == true){
+			if(hit.name == "go" && stopOk == true){
 				Time.timeScale = 1;
 				Application.LoadLevel("Title");
 			}

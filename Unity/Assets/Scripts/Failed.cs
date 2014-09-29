@@ -27,12 +27,14 @@ public class Failed : MonoBehaviour {
 
 	}
 	void result(){
-		Time.timeScale = 0;
+
 
 		if (Player.life == -1 ) {
+			Time.timeScale = 1;
 			Application.LoadLevel("Gameover");
 			return;
 		}
+
 
 		Application.LoadLevel (Application.loadedLevelName);
 	}

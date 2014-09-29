@@ -7,6 +7,7 @@ public class Gameover : MonoBehaviour {
 	
 	private float currentRemainTime;
 	private float goTime;
+	public string goScene;
 	private SpriteRenderer spRenderer;
 	
 	// Use this for initialization
@@ -22,14 +23,14 @@ public class Gameover : MonoBehaviour {
 	void Update () {
 		// 残り時間を更新
 		
+		currentRemainTime -= Time.deltaTime;
 		
-		
-		if ( currentRemainTime <= -1f ) {
+		if ( currentRemainTime <= 0f ) {
 			// 残り時間が無くなったら自分自身を消滅
-			FadeManager.Instance.LoadLevel("Title",3.0f);
+			Application.LoadLevel(goScene);
 			return;
 		}
-		currentRemainTime -= Time.deltaTime;
+
 		
 	}
 }
