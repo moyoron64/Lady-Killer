@@ -12,12 +12,13 @@ using System.Collections;
 /// </summary>
 
 public class DynamicParticle : MonoBehaviour {
+	public bool isGrounded = false;
 	public enum STATES{WATER,GAS,LAVA,NONE}; //The 3 states of the particle
 	STATES currentState=STATES.NONE; //Defines the currentstate of the particle, default is water
 	public SpriteRenderer particleImage; //The image is for the metaball shader for the effect, it is onle seen by the liquids camera.
 	public Color waterColor,gasColor,lavaColor;//The color of the sprite to be separated inside the shader (the shader has the thresholds for red green or blue in the example)
 	float GAS_FLOATABILITY=7.0f; //How fast does the gas goes up?
-	float particleLifeTime=20000000.0f,startTime;//How much time before the particle scalesdown and dies
+	public float particleLifeTime=20000000.0f,startTime;//How much time before the particle scalesdown and dies
 
 	void Awake(){
 		if (currentState == STATES.NONE)
@@ -55,6 +56,10 @@ public class DynamicParticle : MonoBehaviour {
 		}
 	}
 	void Update () {
+		if (isGrounded) {
+			isGrounded = false;
+			particleLifeTime = 10.0f;
+		}
 		switch(currentState){
 			case STATES.WATER: //Water and lava got the same behaviour
 				MovementAnimation();
@@ -104,6 +109,10 @@ public class DynamicParticle : MonoBehaviour {
 			if(other.collider.GetComponent<DynamicParticle>().currentState==STATES.LAVA){
 				SetState(STATES.GAS);
 			}
+		}
+
+		if (other.gameObject.tag == "yuka") {
+			isGrounded = true;
 		}
 
 	}

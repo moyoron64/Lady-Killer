@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\ZankiCheck.cs" />
      <Compile Include="Assets\Scripts\endjump.cs" />
      <Compile Include="Assets\Scripts\fadeMake.cs" />
+     <Compile Include="Assets\Scripts\fadeOutWater.cs" />
      <Compile Include="Assets\Scripts\gazouFade.cs" />
      <Compile Include="Assets\Scripts\haikeiMake.cs" />
      <Compile Include="Assets\Scripts\haikeiMove.cs" />
