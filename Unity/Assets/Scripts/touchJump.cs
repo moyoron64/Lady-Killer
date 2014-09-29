@@ -7,7 +7,7 @@ public class touchJump : MonoBehaviour {
 
 	
 	private float currentRemainTime;
-	private float goTime;
+	public float goTime;
 	private SpriteRenderer spRenderer;
 	private bool touchOk; 
 	public string goScene;
@@ -30,9 +30,17 @@ public class touchJump : MonoBehaviour {
 		currentRemainTime -= Time.deltaTime;
 		goTime -= Time.deltaTime;
 
+
+		if ( goTime <= 0f ) {
+			Application.LoadLevel(goScene);
+		}
+
+
 		if ( currentRemainTime >= 0f ) {
 			touchOk = true;
 		}
+
+
 
 		if (touchOk == true) {
 			Touch touch = Input.GetTouch (0);
@@ -47,10 +55,10 @@ public class touchJump : MonoBehaviour {
 
 
 
-		if ( goTime >= 0f ) {
-			return;
-		}
 
-		Application.LoadLevel ("totalScore"); 
+
+
+	
+
 	}
 }

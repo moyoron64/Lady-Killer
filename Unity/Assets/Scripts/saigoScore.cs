@@ -106,7 +106,7 @@ public class saigoScore : MonoBehaviour {
 	po89,
 	po80;
 	int score;
-	
+	int aa;
 	// Use this for initialization
 	void Start () {
 		score = 0;
@@ -316,20 +316,9 @@ public class saigoScore : MonoBehaviour {
 		po88 = GameObject.Find("88");
 		po89 = GameObject.Find("89");
 		po80 = GameObject.Find("80");
-		po81.renderer.enabled = false;
-		po82.renderer.enabled = false;
-		po83.renderer.enabled = false;
-		po84.renderer.enabled = false;
-		po85.renderer.enabled = false;
-		po86.renderer.enabled = false;
-		po87.renderer.enabled = false;
-		po88.renderer.enabled = false;
-		po89.renderer.enabled = false;
-		po80.renderer.enabled = false;
-
 
 		score = PlayerPrefs.GetInt("sumScore");
-		int highscore = PlayerPrefs.GetInt("highScore");
+		int highscore = PlayerPrefs.GetInt("highScore" , 0);
 		if(score > highscore )highscore = score ;
 
 		PlayerPrefs.SetInt("highScore", highscore);
@@ -342,8 +331,7 @@ public class saigoScore : MonoBehaviour {
 
 
 
-		score = PlayerPrefs.GetInt("sumScore");
-
+		//score = PlayerPrefs.GetInt("sumScore");
 
 		
 		
