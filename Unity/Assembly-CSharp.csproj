@@ -111,6 +111,7 @@
      <Compile Include="Assets\Scripts\rogojump.cs" />
      <Compile Include="Assets\Scripts\saigoScore.cs" />
      <Compile Include="Assets\Scripts\sceneJump.cs" />
+     <Compile Include="Assets\Scripts\touchJump.cs" />
      <Compile Include="Assets\Scripts\traceCheck.cs" />
      <Compile Include="Assets\Scripts\tyuto.cs" />
      <Compile Include="Assets\Scripts\xKotei.cs" />
