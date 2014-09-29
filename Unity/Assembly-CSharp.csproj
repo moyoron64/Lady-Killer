@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\TotalScore.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ZankiCheck.cs" />
+     <Compile Include="Assets\Scripts\downUp.cs" />
      <Compile Include="Assets\Scripts\endjump.cs" />
      <Compile Include="Assets\Scripts\fadeMake.cs" />
      <Compile Include="Assets\Scripts\fadeOutWater.cs" />
