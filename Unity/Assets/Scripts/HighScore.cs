@@ -332,7 +332,7 @@ public class HighScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		score =PlayerPrefs.GetInt("highScore");
+		score =PlayerPrefs.GetInt("highScore" , 0);
 		
 		
 		score0 = score % 10;
