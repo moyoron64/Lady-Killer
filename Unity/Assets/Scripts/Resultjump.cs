@@ -60,7 +60,7 @@ public class Resultjump : MonoBehaviour {
 			goScene = "Scene8";
 			break;
 		case "Result8":
-			goScene = "Eprolouge14";
+			goScene = "Eprolouge4";
 			break;
 		default :
 			goScene = "Gameover";
