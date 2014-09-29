@@ -6,11 +6,23 @@ public class Water : MonoBehaviour {
   初期設定
 --------------------------------------------------------*/
 	bool isActive = true;
+	bool isGrounded;
+	float scaleDown;
+	float scaleX;
+	float scaleY;
+	float scaleZ;
 	GameObject glass;
+    DynamicParticle script;
+
 	Vector3 startPosition;
 
 	// Use this for initialization
 	void Start () {
+		isGrounded = false;
+		scaleX = transform.localScale.x;
+		scaleY = transform.localScale.y;
+		scaleZ = transform.localScale.z;
+		scaleDown = 0;
 		isActive = true;
 		startPosition = transform.localPosition;
 		glass = GameObject.Find("glass-kara");
@@ -23,9 +35,23 @@ public class Water : MonoBehaviour {
 			isActive = false;
 			waterLost();
 		}
+
 		if (Player.waterLife == 0 && Player.isActive) {
 			Invoke("resetStage", 3);
 		}
+
+/*
+		if (isGrounded) {
+
+			float x = transform.localScale.x;
+			scaleDown += 0.08f;
+			transform.localScale = new Vector3 (x - scaleown, x - scalesdown, x);
+
+		}
+		*/
+		//if (isActive == false) {
+//			transform.localScale -= new Vector3(1, 1, 1);
+		//}
 		/*if (Input.GetKeyDown("a") && Player.jump==true) {
 			rigidbody2D.AddForce(Vector2.up * Player.jumpForce);
 		}*/
@@ -70,4 +96,14 @@ public class Water : MonoBehaviour {
 		Player.waterLife = 22;
 		Application.LoadLevel (Application.loadedLevelName);
 	}
+
+/*
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "yuka") {
+			isGrounded = true;
+			//Debug.Log("slipslipslipslisplsispslispslisplsip");
+		}
+	}
+	*/
 }
