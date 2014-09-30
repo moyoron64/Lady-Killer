@@ -17,8 +17,8 @@ public class Attack2 : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider){
-		if((collider.CompareTag("yuka") || collider.CompareTag("block"))&& (Player.myXRole > 350 || Player.myXRole < 10)){ //ジャンプで当たった
-			SoundManager.Instance.PlaySE (10);			
+		if((collider.CompareTag("yuka") || collider.CompareTag("slip"))&& (Player.myXRole > 350 || Player.myXRole < 10)){ //ジャンプで当たった
+			SoundManager.Instance.PlaySE (10);	
 			
 		}
 	}

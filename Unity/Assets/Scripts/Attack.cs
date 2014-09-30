@@ -17,8 +17,8 @@ public class Attack : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider){
-		if(collider.CompareTag("yuka") || collider.CompareTag("block")){ //ジャンプで当たった
-			SoundManager.Instance.PlaySE (12);			
+		if(collider.CompareTag("yuka") ){ //ジャンプで当たった
+			SoundManager.Instance.PlaySE (12);
 			
 		}
 	}

@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 		if((Goal.clearFlag == true) || (failedFlag == true) || (readyGo.startFlag == false) )return;
 
 		if (Timer.timer < 0.0f && isActive) {
-			Invoke("resetStage", 1);
+			resetStage();
 		}
 
 		if (waterLife == 0 && isActive) {
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour {
 
 		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
-		if ( g > 1.458f && jump == false &&  isGrounded==true) {
+		if ( g > 1.48f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 			if(System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295)){
@@ -193,21 +193,28 @@ public class Player : MonoBehaviour {
 
 
 	}*/
+	void OnTriggerEnter2D(Collider2D collider){
+		if(collider.CompareTag("slip") ){ //ジャンプで当たった
+			Debug.Log("aaaaaaaaaaaaaaaaaaa");
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 10f);
+			SoundManager.Instance.PlaySE(19);
+		}
+	}
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
 
 
+
 		if (col.gameObject.tag == "yuka" && ySokudo <= 0   ) {
 			isGrounded = true;
+			
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
+
+			
 		}
 
-		if (col.gameObject.tag == "slip" ) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 160f);
-			SoundManager.Instance.PlaySE(19);
 
-		}
 
 		
 

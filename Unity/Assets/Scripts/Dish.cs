@@ -30,24 +30,11 @@ public class Dish : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D col)
-	{
-		
-		
 
-		
-		if (col.gameObject.tag == "slip"    ) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
-			
-		}
-		
-		
-		
-	}
 
 	public void resetPosition()
 	{
-			if(startPosition.x > GameObject.Find("glass-kara").transform.localPosition.x - 40f)return;
+			if(startPosition.x > GameObject.Find("glass-kara").transform.localPosition.x - 43f)return;
 			transform.localPosition = startPosition;
 			isReuse = true;
 	}
