@@ -41,6 +41,8 @@ public class popWindow : MonoBehaviour {
 			if(colition2d) {
 				RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
 				if(hitObject.collider.gameObject.name =="STOP"  && stopOk ==false){
+
+					SoundManager.Instance.PlaySE(17);
 					Time.timeScale = 0;
 					pop1.renderer.enabled = true;
 					pop2.renderer.enabled = true;
@@ -49,6 +51,7 @@ public class popWindow : MonoBehaviour {
 					pop5.renderer.enabled = true;
 					stopOk = true;
 					return;
+
 
 				}
 
@@ -62,7 +65,7 @@ public class popWindow : MonoBehaviour {
 					pop5.renderer.enabled = false;
 					Time.timeScale = 1;
 					stopOk = false;
-					
+					SoundManager.Instance.PlaySE(17);
 				}
 
 				else if(hitObject.collider.gameObject.name =="ready" && stopOk == true){
@@ -73,11 +76,12 @@ public class popWindow : MonoBehaviour {
 					pop4.renderer.enabled = false;
 					pop5.renderer.enabled = false;
 					game=1;
+					SoundManager.Instance.PlaySE(17);
 				}
 				else  if(hitObject.collider.gameObject.name == "go" && stopOk == true){
 					Time.timeScale = 1;
 					Application.LoadLevel("Title");
-
+					SoundManager.Instance.PlaySE(16);
 				}
 			}
 		}

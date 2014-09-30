@@ -42,9 +42,12 @@ public class tyuto : MonoBehaviour {
 				RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
 				if(hitObject.collider.gameObject.name =="GO"){
 					tPage++;
+					SoundManager.Instance.PlaySE(17);
+
 				}
 				if(hitObject.collider.gameObject.name =="BACK" && tPage != 0){
 					tPage--;
+					SoundManager.Instance.PlaySE(9);
 				}
 
 			}

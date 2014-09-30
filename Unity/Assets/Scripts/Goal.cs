@@ -31,6 +31,8 @@ public class Goal : MonoBehaviour {
 			//Application.LoadLevel ("Result2");
 			Player.life = 3;
 			clearFlag = true;
+			SoundManager.Instance.PlaySE(6);
+			SoundManager.Instance.StopBGM();
 
 		}
 	}

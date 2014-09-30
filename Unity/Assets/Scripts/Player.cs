@@ -54,16 +54,15 @@ public class Player : MonoBehaviour {
 		slip3Count = 0;
 		slip4Count = 0;
 		failedFlag = false;
+		SoundManager.Instance.PlayBGM (2);
 	}
 
 
 	void Update()
 	{
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
-		Debug.Log(life);
 		float zCheck;
-
-		if((Goal.clearFlag == true) || (failedFlag == true) )return;
+		if((Goal.clearFlag == true) || (failedFlag == true) || (readyGo.startFlag == false) )return;
 
 		if (Timer.timer < 0.0f && isActive) {
 			Invoke("resetStage", 1);
@@ -79,14 +78,19 @@ public class Player : MonoBehaviour {
 
 		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
-		if ( g > 1.425f && jump == false &&  isGrounded==true) {
+		if ( g > 1.458f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
+			if(System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295)){
+				//SoundManager.Instance.PlaySE(13);
+			}
+		
 		}
 
 		if (Input.GetKeyDown("a")&& jump == false &&  isGrounded==true) {
 			jump=true;
 			jumpForce = maxjump;
+			//SoundManager.Instance.PlaySE(13);
 		}
 		if (transform.position.y < -1)resetStage();
 
@@ -109,9 +113,9 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		myXRole = transform.eulerAngles.x;
+		myXRole = transform.rotation.z;
 		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
-		if((Goal.clearFlag == true) || (failedFlag == true) )return;
+		if((Goal.clearFlag == true) || (failedFlag == true) || (readyGo.startFlag == false))return;
 		/*float x = Input.GetAxisRaw ("Horizontal");
 
                 // 上・下
@@ -200,9 +204,16 @@ public class Player : MonoBehaviour {
 		}
 
 		if (col.gameObject.tag == "slip"    ) {
-			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
+			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 160f);
+			SoundManager.Instance.PlaySE(19);
 
 		}
+
+		if (col.gameObject.tag == "yuka" &&  System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295) ) {
+			//SoundManager.Instance.PlaySE(10);			
+		}
+
+
 
 
 
@@ -260,6 +271,8 @@ public class Player : MonoBehaviour {
 
 		life --;
 		failedFlag = true;
+		SoundManager.Instance.PlaySE (5);
+		SoundManager.Instance.StopBGM ();
 		/*
 		transform.localPosition = startPosition;
 		transform.eulerAngles = new Vector3(0, 0, 0);

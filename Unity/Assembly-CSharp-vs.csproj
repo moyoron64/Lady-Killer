@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Alpha.cs" />
      <Compile Include="Assets\Scripts\Aspect.cs" />
      <Compile Include="Assets\Scripts\Attack.cs" />
+     <Compile Include="Assets\Scripts\Attack2.cs" />
      <Compile Include="Assets\Scripts\BgmControle.cs" />
      <Compile Include="Assets\Scripts\Black.cs" />
      <Compile Include="Assets\Scripts\CameraControll.cs" />
@@ -90,6 +91,9 @@
      <Compile Include="Assets\Scripts\TotalScore.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ZankiCheck.cs" />
+     <Compile Include="Assets\Scripts\bgmEnd.cs" />
+     <Compile Include="Assets\Scripts\bgmSound.cs" />
+     <Compile Include="Assets\Scripts\butukaru.cs" />
      <Compile Include="Assets\Scripts\downUp.cs" />
      <Compile Include="Assets\Scripts\endjump.cs" />
      <Compile Include="Assets\Scripts\fadeMake.cs" />
@@ -112,7 +116,9 @@
      <Compile Include="Assets\Scripts\rogojump.cs" />
      <Compile Include="Assets\Scripts\saigoScore.cs" />
      <Compile Include="Assets\Scripts\sceneJump.cs" />
+     <Compile Include="Assets\Scripts\seResult.cs" />
      <Compile Include="Assets\Scripts\seSound.cs" />
+     <Compile Include="Assets\Scripts\seTotalResult.cs" />
      <Compile Include="Assets\Scripts\touchJump.cs" />
      <Compile Include="Assets\Scripts\traceCheck.cs" />
      <Compile Include="Assets\Scripts\tyuto.cs" />

@@ -3,11 +3,12 @@ using System.Collections;
 
 public class SeControle: MonoBehaviour {
 	
-	
+	public float currentRemainTime = 0.2f;
 	public float speed = 60.0f;
 	// Use this for initialization
 	void Start () {
-		
+
+
 	}
 	
 	// Update is called once per frame
@@ -44,9 +45,15 @@ public class SeControle: MonoBehaviour {
 						}
 						
 						transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed );
+
+						currentRemainTime -= Time.deltaTime;
+						if(currentRemainTime <= 0){
+							SoundManager.Instance.PlaySE (9);
+							currentRemainTime = 0.2f;
+						}
+
 						
-						
-						
+
 						
 						
 						float check = (this.transform.position.x + 2)/4;

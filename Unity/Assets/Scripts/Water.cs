@@ -87,6 +87,7 @@ public class Water : MonoBehaviour {
 	{
 		Player.waterLife --;
 		isActive = false;
+		SoundManager.Instance.PlaySE (11);
 	}
 
 	public void resetStage()
