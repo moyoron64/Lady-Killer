@@ -78,13 +78,13 @@ public class Player : MonoBehaviour {
 
 		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
-		if ( g > 1.48f && jump == false &&  isGrounded==true) {
+		if ( g > 1.45f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 			if(System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295)){
 				//SoundManager.Instance.PlaySE(13);
 			}
-		
+
 		}
 
 		if (Input.GetKeyDown("a")&& jump == false &&  isGrounded==true) {
@@ -208,15 +208,15 @@ public class Player : MonoBehaviour {
 
 		if (col.gameObject.tag == "yuka" && ySokudo <= 0   ) {
 			isGrounded = true;
-			
+
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
 
-			
+
 		}
 
 
 
-		
+
 
 
 
