@@ -109,6 +109,7 @@
      <Compile Include="Assets\Scripts\popWindow.cs" />
      <Compile Include="Assets\Scripts\popWindow2.cs" />
      <Compile Include="Assets\Scripts\prolougeJump.cs" />
+     <Compile Include="Assets\Scripts\proroBGM.cs" />
      <Compile Include="Assets\Scripts\readyGo.cs" />
      <Compile Include="Assets\Scripts\resultKyori.cs" />
      <Compile Include="Assets\Scripts\resultNokori.cs" />

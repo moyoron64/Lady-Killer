@@ -8,6 +8,10 @@ public class BgmControle: MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		float basyo = PlayerPrefs.GetFloat("BBGM");
+		
+		transform.position =  new Vector2(basyo, transform.position.y);
+
 	}
 	
 	// Update is called once per frame
@@ -46,7 +50,7 @@ public class BgmControle: MonoBehaviour {
 						transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed );
 						
 
-
+						PlayerPrefs.SetFloat("BBGM", target.x);
 					
 					
 						float check = (this.transform.position.x + 2)/4;
@@ -54,6 +58,8 @@ public class BgmControle: MonoBehaviour {
 						Debug.Log(target.x);
 
 						SoundManager.Instance.volume.BGM = check; 
+
+						PlayerPrefs.SetFloat("BGM", check);
 					}
 
 				}

@@ -9,6 +9,12 @@ public class SeControle: MonoBehaviour {
 	void Start () {
 
 
+
+		float basyo = PlayerPrefs.GetFloat("BSE");
+
+		transform.position =  new Vector2(basyo, transform.position.y);
+
+
 	}
 	
 	// Update is called once per frame
@@ -46,6 +52,8 @@ public class SeControle: MonoBehaviour {
 						
 						transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed );
 
+						PlayerPrefs.SetFloat("BSE", target.x);
+
 						currentRemainTime -= Time.deltaTime;
 						if(currentRemainTime <= 0){
 							SoundManager.Instance.PlaySE (9);
@@ -60,7 +68,9 @@ public class SeControle: MonoBehaviour {
 						
 						Debug.Log(target.x);
 						
-						SoundManager.Instance.volume.SE = check; 
+						SoundManager.Instance.volume.SE = check;
+						PlayerPrefs.SetFloat("SE", check);
+
 					}
 					
 				}
