@@ -203,15 +203,13 @@ public class Player : MonoBehaviour {
 			//Debug.Log("slipslipslipslisplsispslispslisplsip");
 		}
 
-		if (col.gameObject.tag == "slip"    ) {
+		if (col.gameObject.tag == "slip" ) {
 			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 160f);
 			SoundManager.Instance.PlaySE(19);
 
 		}
 
-		if (col.gameObject.tag == "yuka" &&  System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295) ) {
-			//SoundManager.Instance.PlaySE(10);			
-		}
+		
 
 
 
@@ -237,7 +235,7 @@ public class Player : MonoBehaviour {
 		}
 
 	}
-
+	/*
 	void Slip(){
 		if (System.Math.Abs (slip1.transform.position.x - this.transform.position.x) < 2 && slip1Count ==0 && Player.isGrounded == true) {
 			rigidbody2D.AddForce (Vector2.right * rigidbody2D.velocity.x * 130f);
@@ -260,7 +258,7 @@ public class Player : MonoBehaviour {
 		}
 
 
-	}
+	}*/
 
 
 
