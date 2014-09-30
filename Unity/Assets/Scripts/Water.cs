@@ -80,8 +80,12 @@ public class Water : MonoBehaviour {
 		return true;
 	}
 
-
-
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "yuka" && isActive == true) {
+			waterLost();
+		}
+	}
 
 	public void waterLost()
 	{
