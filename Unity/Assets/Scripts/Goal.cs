@@ -26,11 +26,13 @@ public class Goal : MonoBehaviour {
 	void Update () {
 		Debug.Log(glass.transform.localPosition.x);
 		Debug.Log(transform.localPosition.x);
-		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.xSokudo >= 0  && Player.isGrounded == true && Player.waterLife != 0 ) {
+		if (checkDistanceWithGlass(xPosition, Player.xPosition) && Player.xSokudo >= 0  && Player.isGrounded == true && Player.waterLife != 0 &&readyGo.startFlag == true) {
 			// ゴールの半径内かつ速度が１以下ならシーン移動
 			//Application.LoadLevel ("Result2");
 			Player.life = 3;
 			clearFlag = true;
+			SoundManager.Instance.PlaySE(6);
+			SoundManager.Instance.StopBGM();
 
 		}
 	}

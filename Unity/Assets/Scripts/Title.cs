@@ -7,7 +7,7 @@ public class Title : MonoBehaviour {
 	void Start () {
 
 
-		SoundManager.Instance.PlayBGM(0);
+		SoundManager.Instance.PlayBGM(3);
 		int score = 0;
 		PlayerPrefs.SetInt("sumScore", score);
 
@@ -35,12 +35,16 @@ public class Title : MonoBehaviour {
 					RaycastHit2D hitObject = Physics2D.Raycast(tapPoint, -Vector2.up);
 				if(hitObject.collider.gameObject.name =="START"){
 					FadeManager.Instance.LoadLevel("Prologue",0.5f);
+					SoundManager.Instance.PlaySE(15);
+					SoundManager.Instance.StopBGM();
 				}
 				if(hitObject.collider.gameObject.name =="OPTION"){
 					Application.LoadLevel("Option");
+					SoundManager.Instance.PlaySE(17);
 				}
 				if(hitObject.collider.gameObject.name =="BACK"){
 					Application.LoadLevel("Title");
+					SoundManager.Instance.PlaySE(16);
 				}
 			}
 		}

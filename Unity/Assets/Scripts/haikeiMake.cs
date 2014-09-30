@@ -16,7 +16,7 @@ public class haikeiMake : MonoBehaviour {
 		kakuteru = GameObject.Find("glass-kara");
 		pCamera = GameObject.Find("cameraPosition");
 		ok = GameObject.Find("ok");
-		this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 20f, this.transform.position.y, this.transform.position.z);
+		this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
 
 
 	}
@@ -31,9 +31,7 @@ public class haikeiMake : MonoBehaviour {
 			this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
 			bPlayer = Player.xPosition;
 		}
-
-
-
+	
 
 		if (sabun < -0.1f) {
 			suraid += 0.04f;

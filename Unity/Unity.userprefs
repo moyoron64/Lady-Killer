@@ -1,19 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TotalFade.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraControll.cs" Line="78" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="272" Column="2" />
-      <File FileName="Assets\Scripts\haikeiMake.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\prolougeJump.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FadeOut.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\popWindow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Failed.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\touchJump.cs" Line="51" Column="37" />
-      <File FileName="Assets\Scripts\HighScore.cs" Line="334" Column="3" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="338" Column="3" />
-      <File FileName="Assets\Scripts\saigoScore.cs" Line="329" Column="36" />
+      <File FileName="Unity.sln" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rank.cs" Line="41" Column="3" />
+      <File FileName="Assets\Scripts\tyuto.cs" Line="37" Column="4" />
+      <File FileName="Assets\Scripts\TotalScore.cs" Line="365" Column="57" />
+      <File FileName="Assets\Scripts\Resultjump.cs" Line="31" Column="38" />
+      <File FileName="Assets\Scripts\TotalFade.cs" Line="26" Column="25" />
+      <File FileName="Assets\Scripts\saigoScore.cs" Line="320" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

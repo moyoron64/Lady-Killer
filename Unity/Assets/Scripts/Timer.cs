@@ -81,14 +81,14 @@ public class Timer : MonoBehaviour {
 		n18.renderer.enabled = false;
 		n19.renderer.enabled = false;
 
-		timer = 61;
+		timer = 60;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if((Goal.clearFlag == false) || (Player.failedFlag == false) )timer -= Time.deltaTime;
+		if(((Goal.clearFlag == false) || (Player.failedFlag == false)) && (readyGo.startFlag == true))timer -= Time.deltaTime;
 		number10 = (int)(timer/10);
 		number = (int)(timer%10);
 

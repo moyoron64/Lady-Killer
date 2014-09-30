@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class TotalScore : MonoBehaviour {
-	
+
+	private int fine;
 	private int score1,score2,score3,score4,score5,score6,score0,score7;
 	GameObject po01,po02,po03,po04,
 	po05,
@@ -326,13 +329,40 @@ public class TotalScore : MonoBehaviour {
 		po88.renderer.enabled = false;
 		po89.renderer.enabled = false;
 		po80.renderer.enabled = false;
-		
-	}
+
+
+		switch(Application.loadedLevelName) {
+		case "Result1":
+			fine = 0;
+			break;
+		case "Result2":
+			fine = 2;
+			break;
+		case "Result3":
+			fine = 5;
+			break;
+		case "Result4":
+			fine = 6;
+			break;
+		case "Result5":
+			fine = 10;
+			break;
+		case "Result6":
+			fine = 7;
+			break;
+		case "Result7":
+			fine = 15;
+			break;
+		case "Result8":
+			fine = 20;
+			break;
+		default :
+			fine = 0;
+			break;
+		}
 	
-	// Update is called once per frame
-	void Update () {
-		
-		score = (int)( (3333333*Timer.timer/60)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+
+		score = (int)( (3333333*Timer.timer/(60 - fine))  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
 		
 		
 		
@@ -434,7 +464,118 @@ public class TotalScore : MonoBehaviour {
 		if(score7==7)po77.renderer.enabled= true;
 		if(score7==8)po78.renderer.enabled= true;
 		if(score7==9)po79.renderer.enabled= true;
+
+
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
 		
+
+		score = (int)( (3333333*Timer.timer/(60 - fine))  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+		
+		
+		
+		score0 = score % 10;
+		score1 = score % 100 /10;
+		score2 = score % 1000/100;
+		score3 = score % 10000/1000;
+		score4 = score % 100000/10000;
+		score5 = score % 1000000/100000;
+		score6 = score % 10000000/1000000;
+		score7 = score / 100000000;
+		
+		
+		
+		if(score0==0)po00.renderer.enabled= true;
+		if(score0==1)po01.renderer.enabled= true;
+		if(score0==2)po02.renderer.enabled= true;
+		if(score0==3)po03.renderer.enabled= true;
+		if(score0==4)po04.renderer.enabled= true;
+		if(score0==5)po05.renderer.enabled= true;
+		if(score0==6)po06.renderer.enabled= true;
+		if(score0==7)po07.renderer.enabled= true;
+		if(score0==8)po08.renderer.enabled= true;
+		if(score0==9)po09.renderer.enabled= true;
+		
+		if(score1==0)po10.renderer.enabled= true;
+		if(score1==1)po11.renderer.enabled= true;
+		if(score1==2)po12.renderer.enabled= true;
+		if(score1==3)po13.renderer.enabled= true;
+		if(score1==4)po14.renderer.enabled= true;
+		if(score1==5)po15.renderer.enabled= true;
+		if(score1==6)po16.renderer.enabled= true;
+		if(score1==7)po17.renderer.enabled= true;
+		if(score1==8)po18.renderer.enabled= true;
+		if(score1==9)po19.renderer.enabled= true;
+		
+		if(score2==0)po20.renderer.enabled= true;
+		if(score2==1)po21.renderer.enabled= true;
+		if(score2==2)po22.renderer.enabled= true;
+		if(score2==3)po23.renderer.enabled= true;
+		if(score2==4)po24.renderer.enabled= true;
+		if(score2==5)po25.renderer.enabled= true;
+		if(score2==6)po26.renderer.enabled= true;
+		if(score2==7)po27.renderer.enabled= true;
+		if(score2==8)po28.renderer.enabled= true;
+		if(score2==9)po29.renderer.enabled= true;
+		
+		if(score3==0)po30.renderer.enabled= true;
+		if(score3==1)po31.renderer.enabled= true;
+		if(score3==2)po32.renderer.enabled= true;
+		if(score3==3)po33.renderer.enabled= true;
+		if(score3==4)po34.renderer.enabled= true;
+		if(score3==5)po35.renderer.enabled= true;
+		if(score3==6)po36.renderer.enabled= true;
+		if(score3==7)po37.renderer.enabled= true;
+		if(score3==8)po38.renderer.enabled= true;
+		if(score3==9)po39.renderer.enabled= true;
+		
+		if(score4==0)po40.renderer.enabled= true;
+		if(score4==1)po41.renderer.enabled= true;
+		if(score4==2)po42.renderer.enabled= true;
+		if(score4==3)po43.renderer.enabled= true;
+		if(score4==4)po44.renderer.enabled= true;
+		if(score4==5)po45.renderer.enabled= true;
+		if(score4==6)po46.renderer.enabled= true;
+		if(score4==7)po47.renderer.enabled= true;
+		if(score4==8)po48.renderer.enabled= true;
+		if(score4==9)po49.renderer.enabled= true;
+		
+		if(score5==0)po50.renderer.enabled= true;
+		if(score5==1)po51.renderer.enabled= true;
+		if(score5==2)po52.renderer.enabled= true;
+		if(score5==3)po53.renderer.enabled= true;
+		if(score5==4)po54.renderer.enabled= true;
+		if(score5==5)po55.renderer.enabled= true;
+		if(score5==6)po56.renderer.enabled= true;
+		if(score5==7)po57.renderer.enabled= true;
+		if(score5==8)po58.renderer.enabled= true;
+		if(score5==9)po59.renderer.enabled= true;
+		
+		if(score6==0)po60.renderer.enabled= true;
+		if(score6==1)po61.renderer.enabled= true;
+		if(score6==2)po62.renderer.enabled= true;
+		if(score6==3)po63.renderer.enabled= true;
+		if(score6==4)po64.renderer.enabled= true;
+		if(score6==5)po65.renderer.enabled= true;
+		if(score6==6)po66.renderer.enabled= true;
+		if(score6==7)po67.renderer.enabled= true;
+		if(score6==8)po68.renderer.enabled= true;
+		if(score6==9)po69.renderer.enabled= true;
+		
+		if(score7==0)po70.renderer.enabled= true;
+		if(score7==1)po71.renderer.enabled= true;
+		if(score7==2)po72.renderer.enabled= true;
+		if(score7==3)po73.renderer.enabled= true;
+		if(score7==4)po74.renderer.enabled= true;
+		if(score7==5)po75.renderer.enabled= true;
+		if(score7==6)po76.renderer.enabled= true;
+		if(score7==7)po77.renderer.enabled= true;
+		if(score7==8)po78.renderer.enabled= true;
+		if(score7==9)po79.renderer.enabled= true;
+
 		
 		
 	}

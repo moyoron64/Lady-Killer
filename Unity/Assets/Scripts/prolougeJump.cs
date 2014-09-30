@@ -46,7 +46,9 @@ public class prolougeJump : MonoBehaviour {
 	}
 	
 	void result(string sceneName){
-		
+
+		SoundManager.Instance.StopBGM ();
+
 		switch(sceneName) {
 		case "Prologue1":
 			goScene = "Tutlial";

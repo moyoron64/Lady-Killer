@@ -27,7 +27,10 @@ public class Gameover : MonoBehaviour {
 		
 		if ( currentRemainTime <= 0f ) {
 			// 残り時間が無くなったら自分自身を消滅
+			SoundManager.Instance.StopBGM();
 			Application.LoadLevel(goScene);
+
+			
 			return;
 		}
 
