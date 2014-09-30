@@ -31,9 +31,7 @@ public class haikeiMake : MonoBehaviour {
 			this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
 			bPlayer = Player.xPosition;
 		}
-
-
-
+	
 
 		if (sabun < -0.1f) {
 			suraid += 0.04f;
