@@ -87,7 +87,7 @@ public class ResultFade : MonoBehaviour {
 
 
 		if(score>8500000)AS.renderer.enabled = true;
-		if(score>7000000 && score <=9000000 )AA.renderer.enabled = true;
+		if(score>7000000 && score <=8500000 )AA.renderer.enabled = true;
 		if(score >=5000000 &&  score <=7000000)AB.renderer.enabled = true;
 		if(score < 5000000)AC.renderer.enabled = true;
 

@@ -7,6 +7,14 @@ public class Title : MonoBehaviour {
 	void Start () {
 
 
+		float me = PlayerPrefs.GetFloat("BSE");
+		float se = PlayerPrefs.GetFloat("BSE");
+
+		SoundManager.Instance.volume.BGM = me; 
+		SoundManager.Instance.volume.BGM = se; 
+
+
+
 		SoundManager.Instance.PlayBGM(3);
 		int score = 0;
 		PlayerPrefs.SetInt("sumScore", score);

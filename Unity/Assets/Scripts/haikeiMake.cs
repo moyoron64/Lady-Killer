@@ -28,9 +28,11 @@ public class haikeiMake : MonoBehaviour {
 
 		if ((pCamera.transform.position.x - kakuteru.transform.position.x) >= -3) {
 			sabun += Player.xPosition - bPlayer;
-			this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
 			bPlayer = Player.xPosition;
 		}
+
+		this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
+		
 	
 
 		if (sabun < -0.1f) {

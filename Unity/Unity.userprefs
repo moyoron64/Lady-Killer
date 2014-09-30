@@ -1,14 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TotalFade.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SeControle.cs">
     <Files>
-      <File FileName="Unity.sln" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Rank.cs" Line="41" Column="3" />
-      <File FileName="Assets\Scripts\tyuto.cs" Line="37" Column="4" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="365" Column="57" />
-      <File FileName="Assets\Scripts\Resultjump.cs" Line="31" Column="38" />
-      <File FileName="Assets\Scripts\TotalFade.cs" Line="26" Column="25" />
-      <File FileName="Assets\Scripts\saigoScore.cs" Line="320" Column="42" />
+      <File FileName="Assets\Scripts\ResultFade.cs" Line="86" Column="48" />
+      <File FileName="Assets\Scripts\BgmControle.cs" Line="60" Column="49" />
+      <File FileName="Assets\Scripts\SeControle.cs" Line="65" Column="7" />
+      <File FileName="Assets\Scripts\Title.cs" Line="7" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
