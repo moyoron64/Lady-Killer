@@ -25,25 +25,30 @@ public class haikeiMake : MonoBehaviour {
 	void Update () {
 
 		if(this.pCamera.transform.position.x < this.ok.transform.position.x )return;
+		if ((this.kakuteru.transform.position.x - this.pCamera.transform.position.x  ) >3)return;
+		if (readyGo.startFlag == false)return;
 
-		if ((pCamera.transform.position.x - kakuteru.transform.position.x) >= -3) {
-			sabun += Player.xPosition - bPlayer;
+
+		//if ((this.kakuteru.transform.position.x - this.pCamera.transform.position.x  ) >=3   && bPlayer - Player.xPosition > 0.01f) {
+			//this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
+			suraid += 0.03f;
+			this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid -5f , this.transform.position.y, this.transform.position.z);
 			bPlayer = Player.xPosition;
-		}
-
-		this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid - 5f, this.transform.position.y, this.transform.position.z);
+		//}
+		 
 		
-	
+
+	    /*
 
 		if (sabun < -0.1f) {
-			suraid += 0.04f;
+
 			sabun = 0;
 		}
 
-		if (sabun > 0.2f) {
+		if (sabun > 0) {
 			sabun = 0;
 		}
-
+		*/
 
 		//Debug.Log ("sabun="+ sabun);
 

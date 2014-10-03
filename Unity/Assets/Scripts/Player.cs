@@ -60,17 +60,19 @@ public class Player : MonoBehaviour {
 
 	void Update()
 	{
+		xPosition = transform.localPosition.x;
 		//Debug.Log ("speeeeeeeeeeed = " + rigidbody2D.velocity.x);
 		float zCheck;
 		if((Goal.clearFlag == true) || (failedFlag == true) || (readyGo.startFlag == false) )return;
 
 		if (Timer.timer < 0.0f && isActive) {
+			isActive = false;
 			resetStage();
 		}
 
 		if (waterLife == 0 && isActive) {
 			isActive = false;
-			Invoke("resetStage", 1);
+			resetStage();
 		}
 
 		float g = Input.acceleration.magnitude;
@@ -78,7 +80,7 @@ public class Player : MonoBehaviour {
 
 		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
-		if ( g > 1.45f && jump == false &&  isGrounded==true) {
+		if ( g > 1.47f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 			if(System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295)){
@@ -114,7 +116,7 @@ public class Player : MonoBehaviour {
 	void FixedUpdate()
 	{
 		myXRole = transform.rotation.z;
-		xPosition = transform.localPosition.x; // 自身の現在地を更新、goal判定に使用
+		 // 自身の現在地を更新、goal判定に使用
 		if((Goal.clearFlag == true) || (failedFlag == true) || (readyGo.startFlag == false))return;
 		/*float x = Input.GetAxisRaw ("Horizontal");
 

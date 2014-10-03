@@ -30,11 +30,11 @@ public class TotalFade : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+		score = PlayerPrefs.GetInt("sumScore");
 
 		if(score>70000000)AS.renderer.enabled = true;
 		if(score>55000000 && score <=70000000 )AA.renderer.enabled = true;
-		if(score >=40000000 &&  score <=55000000)AB.renderer.enabled = true;
+		if(score >=40000000 &&  score <= 55000000)AB.renderer.enabled = true;
 		if(score < 40000000)AC.renderer.enabled = true;
 
 

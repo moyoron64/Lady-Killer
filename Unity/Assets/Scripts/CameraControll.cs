@@ -37,15 +37,15 @@ public class CameraControll : MonoBehaviour {
 		if ( Player.jump == false || this.transform.position.y > this.kakuteru.transform.position.y +3 ) {
 
 
-			/*if(jumpCheck == true ) {
-				transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(this.kakuteru.transform.position.x-3, this.kakuteru.transform.position.y+3,this.kakuteru.transform.position.z + this.offset.z), 0.6f );
-				if(this.transform.position.y == this.kakuteru.transform.position.y)jumpCheck=  false;
-				if (this.transform.position.y > this.stage.transform.position.y || (this.transform.position.x - this.kakuteru.transform.position.x) >= -3 )jumpCheck = false;
+			if(jumpCheck == true ) {
+				transform.position = new Vector3(this.kakuteru.transform.position.x-3,  this.transform.position.y+0.08f,this.kakuteru.transform.position.z + this.offset.z);
+				if( this.transform.position.y > this.kakuteru.transform.position.y +3 )jumpCheck= false;
+				if (this.transform.position.y > this.stage.transform.position.y || (this.transform.position.x - this.kakuteru.transform.position.x) > -3 )jumpCheck = false;
 				if(this.transform.position.y < firstYKakuteru - 0.15f )jumpCheck=false;
 
 
 				if (jumpCheck == true)return;
-			}*/
+			}
 
 
 			if(this.transform.position.y >= firstYKakuteru - 0.15f )this.transform.position = new Vector3(this.transform.position.x, this.kakuteru.transform.position.y + 3, this.kakuteru.transform.position.z + this.offset.z);

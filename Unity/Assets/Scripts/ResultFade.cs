@@ -28,7 +28,6 @@ public class ResultFade : MonoBehaviour {
 		CB.renderer.enabled = false;
 		CC.renderer.enabled = false;
 		CS.renderer.enabled = false;
-
 		switch(Application.loadedLevelName) {
 		case "Result1":
 			fine = 0;
@@ -60,13 +59,15 @@ public class ResultFade : MonoBehaviour {
 		}
 		
 		
-		score = (int)( (3333333*Timer.timer/60 - fine)  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
-	
+		score = (int)( (3333333*Timer.timer/(60 - fine))  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+		
 
 
-		int sumscore =PlayerPrefs.GetInt("sumScore", 0);
 
-		sumscore = score + sumscore;
+
+		int sumscore =PlayerPrefs.GetInt("sumScore" , 0);
+
+		sumscore += score ;
 
 		PlayerPrefs.SetInt("sumScore", sumscore);
 
@@ -76,12 +77,14 @@ public class ResultFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		score = (int)( (3333333*Timer.timer/(60 - fine))  +  (3333333 * (float)Player.waterLife/22) + (3333333 * ((9-System.Math.Abs(Goal.distance) )/ 9)) );
+		
 
 
 
 
 		if(score>8500000)CS.renderer.enabled = true;
-		if(score>7000000 && score <=9000000 )CA.renderer.enabled = true;
+		if(score>7000000 && score <=8500000 )CA.renderer.enabled = true;
 		if(score >5000000 &&  score <=7000000)CB.renderer.enabled = true;
 		if(score <5000000)CC.renderer.enabled = true;
 
