@@ -8,7 +8,7 @@ public class proroBGM : MonoBehaviour {
 	void Start () {
 		Count = 0;
 		SoundManager.Instance.PlayBGM (4);
-		imaTime = 24;
+		imaTime = 25;
 	}
 	
 	// Update is called once per frame

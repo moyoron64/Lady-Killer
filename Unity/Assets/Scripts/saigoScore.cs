@@ -329,9 +329,12 @@ public class saigoScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		score = PlayerPrefs.GetInt("sumScore");
+		int highscore = PlayerPrefs.GetInt("highScore" , 0);
+		if(score > highscore )highscore = score ;
+		
+		PlayerPrefs.SetInt("highScore", highscore);
 
-
-		//score = PlayerPrefs.GetInt("sumScore");
 
 		
 		
@@ -343,7 +346,7 @@ public class saigoScore : MonoBehaviour {
 		score4 = score % 100000/10000;
 		score5 = score % 1000000/100000;
 		score6 = score % 10000000/1000000;
-		score7 = score / 100000000;
+		score7 = score / 10000000;
 		
 		
 		

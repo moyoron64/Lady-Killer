@@ -18,7 +18,7 @@ public class seTotalResult : MonoBehaviour {
 		
 		
 		
-		if(score>70000000)rank = 3;
+		if(score>7000000)rank = 3;
 		if(score>55000000 && score <=70000000 )rank = 0;
 		if(score >=40000000 &&  score <=55000000)rank = 1;
 		if(score < 40000000)rank = 2;
