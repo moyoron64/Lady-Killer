@@ -40,7 +40,6 @@ public class haikeiMake : MonoBehaviour {
 			this.transform.position = new Vector3 (this.kakuteru.transform.position.x + suraid -5f , this.transform.position.y, this.transform.position.z);
 			if(Input.acceleration.x > -0.19)return;
 			if ((this.kakuteru.transform.position.x - this.pCamera.transform.position.x  ) <=3)suraid += 0.03f;
-			bPlayer = Player.xPosition;
 		//}
 		 
 		
