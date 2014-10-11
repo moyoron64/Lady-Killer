@@ -36,6 +36,7 @@ public class Player : MonoBehaviour {
 	public float zCheck;
 	public static bool failedFlag;
 	public static float myXRole;
+
 	void Start(){
 		waterColor = new Color(0.5f, 1.0f, 1.0f, 1.0f);
 		startPosition = transform.localPosition;
@@ -55,7 +56,7 @@ public class Player : MonoBehaviour {
 		slip4Count = 0;
 		failedFlag = false;
 		SoundManager.Instance.PlayBGM (2);
-	}
+}
 
 
 	void Update()
@@ -139,7 +140,6 @@ public class Player : MonoBehaviour {
 
 		xSokudo = rigidbody2D.velocity.x;
 		ySokudo = rigidbody2D.velocity.y;
-
 		Move();
 		Jump();
 		//Fall();
@@ -241,6 +241,7 @@ public class Player : MonoBehaviour {
 
 			//rigidbody2D.velocity = (Vector2.right * moveSpeed * Input.acceleration.x);
 			rigidbody2D.AddForce (Vector2.right * moveSpeed * Input.acceleration.x);
+
 		}
 
 	}
