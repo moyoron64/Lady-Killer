@@ -38,7 +38,7 @@ public class miniMap : MonoBehaviour {
 		float perce = currentDistance/startDistance;
 		float barWidth = miniBar.renderer.bounds.size.x;
 
-		if (isOnBar(barWidth)){
+		if (isOnBar(barWidth) && glass.transform.localPosition.x < glassStartPosition + 0.03){
 			miniGlass.transform.position = new Vector3(transform.position.x + barWidth/2 - 0.22f - ((1-perce) * barWidth), transform.position.y - 0.13f, 0);
 		}
 	}
@@ -49,9 +49,11 @@ public class miniMap : MonoBehaviour {
 			return false;
 		}
 
+		/*
 		if (miniGlass.transform.localPosition.x + 0.22f > transform.localPosition.x + barWidth/2) {
 			return false;
 		}
+		*/
 
 		if (transform.localPosition.x + barWidth/2 < miniGlass.transform.localPosition.x) {
 			return false;
