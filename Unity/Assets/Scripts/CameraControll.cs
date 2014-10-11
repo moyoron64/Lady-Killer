@@ -36,15 +36,21 @@ public class CameraControll : MonoBehaviour {
 
 		if ( Player.jump == false || this.transform.position.y > this.kakuteru.transform.position.y +3 ) {
 
+			float check = this.transform.position.x - this.kakuteru.transform.position.x;
+
 
 			if(jumpCheck == true ) {
-				transform.position = new Vector3(this.kakuteru.transform.position.x-3,  this.transform.position.y+0.08f,this.kakuteru.transform.position.z + this.offset.z);
 				if( this.transform.position.y > this.kakuteru.transform.position.y +3 )jumpCheck= false;
-				if (this.transform.position.y > this.stage.transform.position.y || (this.transform.position.x - this.kakuteru.transform.position.x) > -3 )jumpCheck = false;
+				if (this.transform.position.y > this.stage.transform.position.y ) jumpCheck = false;
+				if(check < -3.13 )jumpCheck = false;
 				if(this.transform.position.y < firstYKakuteru - 0.15f )jumpCheck=false;
 
+				if (jumpCheck == true){
+				transform.position = new Vector3(this.kakuteru.transform.position.x-3,  this.transform.position.y+0.08f,this.kakuteru.transform.position.z + this.offset.z);
+				
 
-				if (jumpCheck == true)return;
+					return;
+				}
 			}
 
 
