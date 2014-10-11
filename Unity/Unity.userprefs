@@ -1,14 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\haikeiMake.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tenmetu.cs">
     <Files>
-      <File FileName="Assets\Scripts\haikeiMake.cs" Line="45" Column="14" />
+      <File FileName="Unity.sln" Line="1" Column="1" />
       <File FileName="Assets\Scripts\saigoScore.cs" Line="419" Column="44" />
-      <File FileName="Assets\Scripts\CameraControll.cs" Line="100" Column="3" />
-      <File FileName="Assets\Scripts\Player.cs" Line="292" Column="2" />
-      <File FileName="Assets\Scripts\Rank.cs" Line="9" Column="3" />
-      <File FileName="Assets\Scripts\ResultFade.cs" Line="93" Column="64" />
-      <File FileName="Assets\Scripts\TotalScore.cs" Line="351" Column="13" />
+      <File FileName="Assets\Scripts\CameraControll.cs" Line="106" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="293" Column="2" />
+      <File FileName="Assets\Scripts\Rank.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ResultFade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TotalScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tyuto.cs" Line="85" Column="1" />
+      <File FileName="Assets\Scripts\Tenmetu.cs" Line="19" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

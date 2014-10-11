@@ -46,7 +46,7 @@ public class CameraControll : MonoBehaviour {
 				if(this.transform.position.y < firstYKakuteru - 0.15f )jumpCheck=false;
 
 				if (jumpCheck == true){
-				transform.position = new Vector3(this.kakuteru.transform.position.x-3,  this.transform.position.y+0.08f,this.kakuteru.transform.position.z + this.offset.z);
+				transform.position = new Vector3(this.kakuteru.transform.position.x-3,  this.transform.position.y+0.123f,this.kakuteru.transform.position.z + this.offset.z);
 				
 
 					return;
