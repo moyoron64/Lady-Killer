@@ -81,7 +81,7 @@ public class Player : MonoBehaviour {
 
 		//Debug.Log ("accelerationaaaaa = "+Input.acceleration.magnitude);
 
-		if ( g > 1.47f && jump == false &&  isGrounded==true) {
+		if ( g > 1.5f && jump == false &&  isGrounded==true) {
 			jump = true;
 			jumpForce = maxjump;
 			if(System.Math.Abs(transform.rotation.z)  < 340 &&(System.Math.Abs(transform.rotation.z)  <  65  || System.Math.Abs(transform.rotation.z)  <  295)){
